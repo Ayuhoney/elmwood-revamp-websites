@@ -149,6 +149,25 @@
 		var myPlayer = $("#herovideo").YTPlayer();
 	}
 
+	/* Force muted hero background video playback */
+	var heroVideo = document.getElementById('myvideo');
+	if (heroVideo) {
+		heroVideo.muted = true;
+		heroVideo.setAttribute('playsinline', '');
+		var tryPlay = function () {
+			var playPromise = heroVideo.play();
+			if (playPromise && typeof playPromise.catch === 'function') {
+				playPromise.catch(function () {});
+			}
+		};
+		if (heroVideo.readyState >= 2) {
+			tryPlay();
+		} else {
+			heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
+			heroVideo.load();
+		}
+	}
+
 	/* Init Counter */
 	if ($('.counter').length) {
 		$('.counter').counterUp({ delay: 6, time: 3000 });
@@ -337,35 +356,15 @@
 		}
 	});
 
-	/* Contact form validation */
+	/* Contact form validation - offline (no remote POST) */
 	var $contactform = $("#contactForm");
 	$contactform.validator({focus: false}).on("submit", function (event) {
 		if (!event.isDefaultPrevented()) {
 			event.preventDefault();
-			submitForm();
+			$contactform[0].reset();
+			submitMSG(true, "Message Sent Successfully!");
 		}
 	});
-
-	function submitForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-process.php",
-			data: $contactform.serialize(),
-			success : function(text){
-				if (text === "success"){
-					formSuccess();
-				} else {
-					submitMSG(false,text);
-				}
-			}
-		});
-	}
-
-	function formSuccess(){
-		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
-	}
 
 	function submitMSG(valid, msg){
 		if(valid){
@@ -377,35 +376,15 @@
 	}
 	/* Contact form validation end */
 
-	/* Appointment form validation */
+	/* Appointment form validation - offline (no remote POST) */
 	var $appointmentForm = $("#appointmentForm");
 	$appointmentForm.validator({focus: false}).on("submit", function (event) {
 		if (!event.isDefaultPrevented()) {
 			event.preventDefault();
-			submitappointmentForm();
+			$appointmentForm[0].reset();
+			appointmentsubmitMSG(true, "Message Sent Successfully!");
 		}
 	});
-
-	function submitappointmentForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-appointment.php",
-			data: $appointmentForm.serialize(),
-			success : function(text){
-				if (text === "success"){
-					appointmentformSuccess();
-				} else {
-					appointmentsubmitMSG(false,text);
-				}
-			}
-		});
-	}
-
-	function appointmentformSuccess(){
-		$appointmentForm[0].reset();
-		appointmentsubmitMSG(true, "Message Sent Successfully!")
-	}
 
 	function appointmentsubmitMSG(valid, msg){
 		if(valid){
@@ -420,14 +399,36 @@
 	/* Animated Wow Js */	
 	new WOW().init();
 
-	/* Popup Video */
+	/* Popup Video - local MP4 only (fully offline, no YouTube/iframe CDN) */
 	if ($('.popup-video').length) {
+		$('.popup-video').each(function () {
+			var href = $(this).attr('href');
+			if (!href || href === '#' || /^https?:/i.test(href) || /youtube|youtu\.be/i.test(href)) {
+				$(this).attr('href', 'images/hero-bg-video.mp4');
+			}
+		});
+
 		$('.popup-video').magnificPopup({
-			type: 'iframe',
+			type: 'inline',
 			mainClass: 'mfp-fade',
 			removalDelay: 160,
 			preloader: false,
-			fixedContentPos: true
+			fixedContentPos: true,
+			callbacks: {
+				elementParse: function (item) {
+					var src = item.el.attr('href') || 'images/hero-bg-video.mp4';
+					item.src =
+						'<div class="offline-video-popup" style="max-width:960px;margin:0 auto;">' +
+						'<video src="' + src + '" controls autoplay playsinline ' +
+						'style="width:100%;max-height:80vh;background:#000;border-radius:12px;"></video>' +
+						'</div>';
+				},
+				close: function () {
+					$('.offline-video-popup video').each(function () {
+						this.pause();
+					});
+				}
+			}
 		});
 	}
 

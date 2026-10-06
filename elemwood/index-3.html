@@ -56,13 +56,7 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href=".">Home</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Home - Version 1</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-2.html">Home - Version 2</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-3.html">Home - Version 3</a></li>
-                                    </ul>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
                                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -108,7 +102,9 @@
         <div class="hero-bg-video-prime">
             <!-- Selfhosted Video Start -->
             <!-- <video autoplay muted loop id="herovideo"><source src="images/hero-bg-video.mp4" type="video/mp4"></video> -->
-            <video autoplay muted playsinline loop id="myvideo"><source src="images/hero-bg-video.mp4" type="video/mp4"></video>
+            <video id="myvideo" autoplay muted playsinline loop preload="auto" poster="images/hero-poster.jpg">
+                <source src="images/hero-bg-video.mp4" type="video/mp4">
+            </video>
             
             <!-- Selfhosted Video End -->
 
@@ -140,7 +136,7 @@
 
                             <!-- Video Play Button Start -->
                             <div class="video-play-button-prime" data-cursor-text="Play">
-                                <a href="#" class="popup-video">
+                                <a href="images/hero-bg-video.mp4" class="popup-video">
                                     <span class="bg-effect"><i class="fa-solid fa-play"></i></span>
                                     <p>Watch Our Story</p>
                                 </a>
@@ -1440,6 +1436,7 @@
     <!-- Text Effect js file -->
     <script src="js/SplitText.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
+
     <!-- YTPlayer js File -->
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <!-- Wow js file -->

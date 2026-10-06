@@ -821,12 +821,15 @@ header.main-header .header-sticky.active{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 0;
 }
 
 .hero .hero-bg-video video{
+	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	background: transparent;
 }
 
 .hero .container{
@@ -9355,12 +9358,15 @@ header.main-header .header-sticky.active{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 0;
 }
 
 .hero-prime .hero-bg-video-prime video{
+	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	background: transparent;
 }
 
 .hero-prime .container{
