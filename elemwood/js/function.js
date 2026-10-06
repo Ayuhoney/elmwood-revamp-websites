@@ -22,9 +22,8 @@
 		$window.on("scroll", function() {
 			var fromTop = $(window).scrollTop();
 			setHeaderHeight();
-			var headerHeight = $('header.active-sticky-header .header-sticky').outerHeight()
-			$("header.active-sticky-header .header-sticky").toggleClass("hide", (fromTop > headerHeight + 100));
-			$("header.active-sticky-header .header-sticky").toggleClass("active", (fromTop > 600));
+			$("header.active-sticky-header .header-sticky").toggleClass("active", (fromTop > 60));
+			$("header.active-sticky-header .header-sticky").removeClass("hide");
 		});
 	}	
 	
@@ -107,6 +106,75 @@
 					slidesPerView: 1,
 				},
 			}
+		});
+	}
+
+	/* Hero Image Carousel */
+	if ($('.hero-carousel-swiper').length) {
+		var $heroPrime = $('.hero-prime');
+
+		function matchHeroToImage(swiperInstance) {
+			var slide = swiperInstance.slides[swiperInstance.activeIndex];
+			if (!slide) return;
+			var img = slide.querySelector('.hero-slide-main');
+			if (!img) return;
+
+			function applySize() {
+				if (!img.naturalWidth || !img.naturalHeight) return;
+				var ratio = img.naturalWidth / img.naturalHeight;
+				var width = $heroPrime.outerWidth();
+				if (!width || !ratio) return;
+				/* Boost height so hero fills more screen and white gap below goes away */
+				var nextHeight = Math.round((width / ratio) * 1.28);
+				var minH = window.innerWidth <= 991 ? 580 : 680;
+				var maxH = Math.round(window.innerHeight * 0.96);
+				nextHeight = Math.max(minH, Math.min(maxH, nextHeight));
+				$heroPrime.css({
+					height: nextHeight + 'px',
+					minHeight: minH + 'px',
+					aspectRatio: 'auto'
+				});
+			}
+
+			if (img.complete && img.naturalWidth) {
+				applySize();
+			} else {
+				img.addEventListener('load', applySize, { once: true });
+			}
+		}
+
+		const hero_carousel = new Swiper('.hero-carousel-swiper', {
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			speed: 1100,
+			loop: true,
+			allowTouchMove: true,
+			autoplay: {
+				delay: 4500,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: '.hero-carousel-pagination',
+				clickable: true
+			},
+			navigation: {
+				nextEl: '.hero-carousel-next',
+				prevEl: '.hero-carousel-prev'
+			},
+			on: {
+				init: function () {
+					matchHeroToImage(this);
+				},
+				slideChangeTransitionStart: function () {
+					matchHeroToImage(this);
+				}
+			}
+		});
+
+		$window.on('resize', function () {
+			matchHeroToImage(hero_carousel);
 		});
 	}
 
