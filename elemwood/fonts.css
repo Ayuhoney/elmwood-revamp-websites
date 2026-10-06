@@ -124,3 +124,39 @@
   font-display: swap;
   src: url(fonts/s/sora/v17/xMQOuFFYT72X5wkB_18qmnndmSfSmX-K.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/playfair/PlayfairDisplay-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/playfair/PlayfairDisplay-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/playfair/PlayfairDisplay-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/playfair/PlayfairDisplay-MediumItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/playfair/PlayfairDisplay-SemiBoldItalic.ttf) format('truetype');
+}

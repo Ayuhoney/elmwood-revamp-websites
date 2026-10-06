@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#F4FFF9"/>
+      <stop offset="55%" stop-color="#E9FFF4"/>
+      <stop offset="100%" stop-color="#B8EFD0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E9FFF4"/>
+      <stop offset="100%" stop-color="#7AD4A8"/>
+    </linearGradient>
+  </defs>
+  <!-- outer glow ring -->
+  <circle cx="32" cy="32" r="31" fill="url(#g)" stroke="url(#ring)" stroke-width="2"/>
+  <!-- inner soft ring -->
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="#043B35" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- caduceus in brand purple -->
+  <g fill="none" stroke="#043B35" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 14v30"/>
+    <circle cx="32" cy="13" r="2.2" fill="#043B35" stroke="none"/>
+    <!-- wings -->
+    <path d="M32 18c-5-1.5-9-.5-11 2.5 3.5-1 7-.5 11 2"/>
+    <path d="M32 18c5-1.5 9-.5 11 2.5-3.5-1-7-.5-11 2"/>
+    <!-- snakes -->
+    <path d="M32 22c-6 2-8 5-8 8s3 5 8 7c-5 2-8 4-8 7s3.5 5.5 8 6.5"/>
+    <path d="M32 22c6 2 8 5 8 8s-3 5-8 7c5 2 8 4 8 7s-3.5 5.5-8 6.5"/>
+  </g>
+  <circle cx="32" cy="46.5" r="2" fill="#043B35"/>
+</svg>
