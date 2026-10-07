@@ -36,10 +36,54 @@
 	<div class="preloader">
 		<div class="loading-container">
 			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+			<div id="loading-icon"><img src="images/logo-mark.png" alt="Elmwood Medical Centre"></div>
 		</div>
 	</div>
 	<!-- Preloader End -->
+
+
+    <!-- HotDoc Glass Modal Start -->
+    <div class="elmwood-hotdoc-modal" id="elmwoodHotdocModal" role="dialog" aria-modal="true" aria-labelledby="elmwoodHotdocTitle" hidden>
+        <div class="elmwood-hotdoc-backdrop" data-hotdoc-close></div>
+        <div class="elmwood-hotdoc-panel">
+            <div class="elmwood-hotdoc-glow" aria-hidden="true"></div>
+            <div class="elmwood-hotdoc-top">
+                <div class="elmwood-hotdoc-brand">
+                    <img src="images/logo-mark.png" alt="">
+                    <div>
+                        <span class="elmwood-hotdoc-kicker">HotDoc · Elmwood Medical Centre</span>
+                        <h2 id="elmwoodHotdocTitle">Online Patient Services</h2>
+                    </div>
+                </div>
+                <button type="button" class="elmwood-hotdoc-x" data-hotdoc-close aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="elmwood-hotdoc-tabs" role="tablist" aria-label="HotDoc options">
+                <button type="button" class="elmwood-hotdoc-tab is-active" role="tab" aria-selected="true" data-hotdoc-tab="form" data-hotdoc-src="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form">Online Form</button>
+                <button type="button" class="elmwood-hotdoc-tab" role="tab" aria-selected="false" data-hotdoc-tab="book" data-hotdoc-src="https://www.hotdoc.com.au/medical-centres/wodonga-VIC-3690/elmwood-medical-centre/doctors">Book on HotDoc</button>
+            </div>
+
+            <div class="elmwood-hotdoc-frame-wrap">
+                <div class="elmwood-hotdoc-loader" data-hotdoc-loader>
+                    <span class="elmwood-hotdoc-spinner" aria-hidden="true"></span>
+                    <p>Loading HotDoc…</p>
+                </div>
+                <iframe class="elmwood-hotdoc-frame" data-hotdoc-frame title="HotDoc online form" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="elmwood-hotdoc-fallback" data-hotdoc-fallback hidden>
+                    <p>If the form does not load here, continue securely on HotDoc.</p>
+                    <a class="btn-default" data-hotdoc-external href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Continue on HotDoc</a>
+                </div>
+            </div>
+
+            <div class="elmwood-hotdoc-actions">
+                <button type="button" class="elmwood-hotdoc-cancel" data-hotdoc-close>Cancel</button>
+                <a class="elmwood-hotdoc-openout" data-hotdoc-external href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Open in new tab <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- HotDoc Glass Modal End -->
 
     <!-- Header Start -->
 	<header class="main-header active-sticky-header">
@@ -48,8 +92,11 @@
 				<div class="container">
 					<!-- Logo Start -->
 					<a class="navbar-brand" href="./">
-						<span class="brand-mark"><img src="images/logo-mark.png" alt=""></span>
-						<span class="brand-text"><span class="brand-text-shine">Elmwood.</span></span>
+						<span class="brand-mark"><img src="images/logo-mark.png" alt="Elmwood Medical Centre"></span>
+						<span class="brand-text">
+							<span class="brand-text-shine">Elmwood.</span>
+							<span class="brand-sub"><span class="brand-sub-text">Medical Centre</span></span>
+						</span>
 					</a>
 					<!-- Logo End -->
 
@@ -58,39 +105,178 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="case-study.html">Case Study</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="case-study-single.html">Case Study Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing Plan</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                <li class="nav-item submenu has-megamenu">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                    <div class="elmwood-megamenu" role="region" aria-label="Services menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-services">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-4">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">General Practice</span>
+                                                    <ul>
+                                                        <li><a href="service-womens-health.html">Women's Health</a></li>
+                                                        <li><a href="service-mens-health.html">Men's Health</a></li>
+                                                        <li><a href="service-childrens-health.html">Children's Health</a></li>
+                                                        <li><a href="service-sexual-health.html">Sexual Health</a></li>
+                                                        <li><a href="service-mental-health.html">Mental Health</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Checks &amp; Clinics</span>
+                                                    <ul>
+                                                        <li><a href="service-skin-cancer-clinic.html">Skin Cancer Clinic</a></li>
+                                                        <li><a href="service-preventative-health.html">Preventative Health</a></li>
+                                                        <li><a href="service-vaccinations.html">Vaccinations</a></li>
+                                                        <li><a href="service-employment-health.html">Employment Health</a></li>
+                                                        <li><a href="service-stop-smoking-clinic.html">Stop Smoking Clinic</a></li>
+                                                        <li><a href="service-pathology.html">Pathology</a></li>
+                                                        <li><a href="service-fracture-clinic.html">Fracture Clinic</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Special Care</span>
+                                                    <ul>
+                                                        <li><a href="service-procedural-clinic.html">Procedural Clinic</a></li>
+                                                        <li><a href="service-allied-health.html">Allied Health</a></li>
+                                                        <li><a href="service-veteran-affairs.html">Veteran Affairs</a></li>
+                                                        <li><a href="service-indigenous-health.html">Indigenous Health</a></li>
+                                                        <li><a href="service-public-servants.html">Public Servants</a></li>
+                                                        <li><a href="service-lgbtqi.html">LGBTQI+</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Partners</span>
+                                                    <ul>
+                                                        <li><a href="https://completeveteranhealth.com.au/" target="_blank" rel="noopener noreferrer">Veteran Health</a></li>
+                                                        <li><a href="services.html">View All Services</a></li>
+                                                        <li><a href="book-appointment.html">Book Appointment</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card" href="book-appointment.html">
+                                                <img src="images/service-image-6.jpg" alt="Family medicine at Elmwood">
+                                                <span class="elmwood-megamenu-card-body">
+                                                    <strong>Family Medicine</strong>
+                                                    <em>Comprehensive care for all ages</em>
+                                                    <span class="elmwood-megamenu-card-cta">Book GP Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="service-womens-health.html">Women's Health</a></li>
+                                        <li><a href="service-mens-health.html">Men's Health</a></li>
+                                        <li><a href="service-childrens-health.html">Children's Health</a></li>
+                                        <li><a href="service-sexual-health.html">Sexual Health</a></li>
+                                        <li><a href="service-mental-health.html">Mental Health</a></li>
+                                        <li><a href="service-skin-cancer-clinic.html">Skin Cancer Clinic</a></li>
+                                        <li><a href="service-preventative-health.html">Preventative Health</a></li>
+                                        <li><a href="service-vaccinations.html">Vaccinations</a></li>
+                                        <li><a href="service-employment-health.html">Employment Health</a></li>
+                                        <li><a href="service-stop-smoking-clinic.html">Stop Smoking Clinic</a></li>
+                                        <li><a href="service-procedural-clinic.html">Procedural Clinic</a></li>
+                                        <li><a href="service-allied-health.html">Allied Health</a></li>
+                                        <li><a href="service-veteran-affairs.html">Veteran Affairs</a></li>
+                                        <li><a href="service-indigenous-health.html">Indigenous Health</a></li>
+                                        <li><a href="service-public-servants.html">Public Servants</a></li>
+                                        <li><a href="service-lgbtqi.html">LGBTQI+</a></li>
+                                        <li><a href="service-pathology.html">Pathology</a></li>
+                                        <li><a href="service-fracture-clinic.html">Fracture Clinic</a></li>
+                                        <li><a href="https://completeveteranhealth.com.au/" target="_blank" rel="noopener noreferrer">Veteran Health</a></li>
+                                        <li><a href="services.html">View All Services</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                <li class="nav-item submenu has-megamenu has-megamenu-align">
+                                    <a class="nav-link" href="team.html">Our Team</a>
+                                    <div class="elmwood-megamenu elmwood-megamenu-align" role="region" aria-label="Our Team menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-team">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-2">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Meet Our Doctors</span>
+                                                    <ul>
+                                                        <li><a href="team.html">All Doctors</a></li>
+                                                        <li><a href="doctor-joseph.html">Dr Joseph</a></li>
+                                                        <li><a href="doctor-warren.html">Dr Warren</a></li>
+                                                        <li><a href="doctor-ayesha.html">Dr Ayesha</a></li>
+                                                        <li><a href="doctor-neetu-grover.html">Dr Neetu Grover</a></li>
+                                                        <li><a href="doctor-bhavin-purohit.html">Dr Bhavin Purohit</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Our Team</span>
+                                                    <ul>
+                                                        <li><a href="doctor-sinto-kunjachan.html">Dr Sinto Kunjachan</a></li>
+                                                        <li><a href="doctor-lyza-cara.html">Dr Lyza Cara</a></li>
+                                                        <li><a href="doctor-iby-ann-xavier.html">Dr Iby Ann Xavier</a></li>
+                                                        <li><a href="doctor-sonam-topgyal.html">Dr Sonam Topgyal</a></li>
+                                                        <li><a href="doctor-margi-patel.html">Margi Patel — Dietitian</a></li>
+                                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card elmwood-megamenu-card--photo" href="team.html" aria-label="Meet the Elmwood doctors">
+                                                <img src="images/about-us-image-1-prime.jpg" alt="Elmwood doctors">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="team.html">All Doctors</a></li>
+                                        <li><a href="doctor-joseph.html">Dr Joseph</a></li>
+                                        <li><a href="doctor-warren.html">Dr Warren</a></li>
+                                        <li><a href="doctor-ayesha.html">Dr Ayesha</a></li>
+                                        <li><a href="doctor-neetu-grover.html">Dr Neetu Grover</a></li>
+                                        <li><a href="doctor-bhavin-purohit.html">Dr Bhavin Purohit</a></li>
+                                        <li><a href="doctor-sinto-kunjachan.html">Dr Sinto Kunjachan</a></li>
+                                        <li><a href="doctor-lyza-cara.html">Dr Lyza Cara</a></li>
+                                        <li><a href="doctor-iby-ann-xavier.html">Dr Iby Ann Xavier</a></li>
+                                        <li><a href="doctor-sonam-topgyal.html">Dr Sonam Topgyal</a></li>
+                                        <li><a href="doctor-margi-patel.html">Margi Patel — Dietitian</a></li>
+                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu has-megamenu has-megamenu-align">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                    <div class="elmwood-megamenu elmwood-megamenu-align" role="region" aria-label="About Us menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-about">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-2">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Our Clinic</span>
+                                                    <ul>
+                                                        <li><a href="new-patients.html">New Patients</a></li>
+                                                        <li><a href="careers.html">Careers</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Get Started</span>
+                                                    <ul>
+                                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                                        <li><a href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Online Registration Form</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card elmwood-megamenu-card--photo" href="new-patients.html" aria-label="New patients">
+                                                <img src="images/about-us-image-2-prime.jpg" alt="New patients welcome at Elmwood">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="new-patients.html">New Patients</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                        <li><a href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Online Registration Form</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="gallery.html">Our Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
                                 <li class="nav-item highlighted-menu"><a class="nav-link" href="book-appointment.html">Book Online</a></li>
                             </ul>
                         </div>
                         
-                        <!-- Header Btn Start — toggles Book Online / Book Skin Check -->
+                        <!-- Header Btn Start -->
                         <div class="header-btn">
-                            <a href="book-appointment.html" class="btn-default book-cta-toggle"
-                               data-label-online="Book Online"
-                               data-label-skin="Book Skin Check"
-                               data-href-online="book-appointment.html"
-                               data-href-skin="https://elmwoodmedical.com.au/services/skin-cancer-clinic/">
-                                <span class="book-cta-text">Book Online</span>
-                            </a>
+                            <button type="button" class="btn-default elmwood-hotdoc-trigger" data-hotdoc-open aria-haspopup="dialog"><span class="elmwood-btn-text-shimmer">Online Form</span></button>
+                            <a href="book-appointment.html" class="btn-default">Book Now</a>
                         </div>
                         <!-- Header Btn End -->
                     </div>
@@ -157,7 +343,7 @@
                                 <!-- About Us Counter Content Start -->
                                 <div class="about-us-counter-content">
                                     <h2><span class="counter">8</span>K+</h2>
-                                    <p>Therapy sessions conducted</p>
+                                    <p>Patients cared for since 2007</p>
                                 </div>
                                 <!-- About Us Counter Content End -->
                             </div>
@@ -186,8 +372,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Guiding you toward healing & inner strength</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We provide compassionate, personalized counselling to help you process challenge rebuild confidence, and develop the emotional resilience.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">About Our Medical Centre in Wodonga</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Elmwood Medical Centre is Wodonga’s one stop comprehensive medical centre and we offer a comprehensive range of primary care services. Our aim is to provide high quality medical treatment in a caring environment to all of our patients.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -199,13 +385,24 @@
                                     <img src="images/icon-about-us-item-1.svg" alt="">
                                 </div>
                                 <div class="about-us-item-content">
-                                    <h3>Personalized Therapy Approach</h3>
-                                    <p>Our therapy plans are thoughtfully tailored to your specific needs, ensuring practical strategies.</p>
+                                    <h3>Patient-Centred Care</h3>
+                                    <p>Strive to achieve best practice standards and continuous improvement in all aspects of patient care.</p>
                                 </div>
                             </div>
                             <!-- About Us Item End -->
                         </div>
                         <!-- About Us Item List End -->
+
+
+                        <div class="service-entry wow fadeInUp" data-wow-delay="0.5s" style="margin-top:24px;">
+                            <h3>Our Values</h3>
+                            <ul>
+                                <li>Provide patient-centred care, taking into account the psychosocial, spiritual and physical needs of each individual.</li>
+                                <li>Strive to achieve best practice standards and continuous improvement in all aspects of patient care.</li>
+                                <li>To maintain professional standards of confidentiality of all information pertaining to patients.</li>
+                                <li>Foster a culture of respect, support, education, teamwork and open communication between patients and all involved at Elmwood Medical Centre</li>
+                            </ul>
+                        </div>
 
                         <!-- About Us Content Body Start -->
                         <div class="about-us-content-body wow fadeInUp" data-wow-delay="0.6s">
@@ -252,7 +449,7 @@
 
                                 <!-- About Review Content Start -->
                                 <div class="about-review-content">
-                                    <p>Helping You Grow, Heal & Thrive</p>
+                                    <p>Foster a culture of respect, support, education, teamwork and open communication.</p>
                                 </div>
                                 <!-- About Review Content End -->
                             </div>
@@ -281,7 +478,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <span class="section-sub-title wow fadeInUp">Our Approach</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">A thoughtful approach to personalized therapy</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">A thoughtful approach to patient-centred care</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -291,7 +488,7 @@
                     <div class="section-content-btn">
                         <!-- Section Title Content Start -->
                         <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                            <p>We combine evidence-based techniques with compassionate care to create therapy plans tailored to your unique experiences.</p>
+                            <p>We combine evidence-based medicine with compassionate care to support healthy outcomes for everyone in our community.</p>
                         </div>
                         <!-- Section Title Content End -->
     
@@ -357,7 +554,7 @@
                             </div>
                             <div class="approach-item-content">
                                 <h3>Our Values</h3>
-                                <p>Our Values is to create a world where mental health support is accessible.</p>
+                                <p>Provide patient-centred care, taking into account the psychosocial, spiritual and physical needs of each individual.</p>
                             </div>
                         </div>
                         <div class="approach-item-image">
@@ -405,8 +602,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Psychology Benefits</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Compassionate expertise you can rely on</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our commitment to professionalism, confidentiality, & personalized therapy ensures you receive thoughtful guidance and support every step of your journey.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Compassionate medical care you can rely on</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our commitment to professionalism, confidentiality, and patient-centred care ensures you receive thoughtful guidance and support every step of your journey.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -415,7 +612,7 @@
                             <ul>
                                 <li>Our team of trained therapists brings extensive knowledge</li>
                                 <li>We ensure a private and supportive space where you can openly</li>
-                                <li>Every client receives tailored guidance and therapy strategies designed</li>
+                                <li>Every patient receives tailored guidance and care strategies designed</li>
                             </ul>
                         </div>
                         <!-- Benefit Content List Box End -->
@@ -427,7 +624,7 @@
                                 <!-- Skill Item Start -->
                                 <div class="skillbar" data-percent="90%">
                                     <div class="skill-data">
-                                        <div class="skill-title">Client Satisfaction Rate</div>
+                                        <div class="skill-title">Patient Satisfaction Rate</div>
                                         <div class="skill-no">90%</div>
                                     </div>
                                     <div class="skill-progress">
@@ -443,7 +640,7 @@
                                 <!-- Skill Item Start -->
                                 <div class="skillbar" data-percent="95%">
                                     <div class="skill-data">
-                                        <div class="skill-title">Positive Therapy Outcomes</div>
+                                        <div class="skill-title">Positive Patient Outcomes</div>
                                         <div class="skill-no">95%</div>
                                     </div>
                                     <div class="skill-progress">
@@ -554,32 +751,32 @@
                         <!-- Fun Fact Item Start -->
                         <div class="fun-fact-item">
                             <h2><span class="counter">4.9</span>/5</h2>
-                            <h3>Couples Counselling</h3>
-                            <p>Strengthen communication, rebuild trust, and resolve.</p>
+                            <h3>Patient Satisfaction</h3>
+                            <p>Committed to high-quality care for our local community.</p>
                         </div>
                         <!-- Fun Fact Item End -->
 
                         <!-- Fun Fact Item Start -->
                         <div class="fun-fact-item">
                             <h2><span class="counter">1500</span>+</h2>
-                            <h3>Clients Supported</h3>
-                            <p>We have helped individuals, couples, and families navigate.</p>
+                            <h3>Patients Supported</h3>
+                            <p>Supporting individuals and families across Wodonga and surrounds.</p>
                         </div>
                         <!-- Fun Fact Item End -->
 
                         <!-- Fun Fact Item Start -->
                         <div class="fun-fact-item">
                             <h2><span class="counter">98</span>%</h2>
-                            <h3>Client Satisfaction Rate</h3>
-                            <p>The majority of our clients report improve emotional well being</p>
+                            <h3>Patient Satisfaction Rate</h3>
+                            <p>The majority of our patients report a positive care experience.</p>
                         </div>
                         <!-- Fun Fact Item End -->
 
                         <!-- Fun Fact Item Start -->
                         <div class="fun-fact-item">
                             <h2><span class="counter">25</span>+</h2>
-                            <h3>Years of Experience</h3>
-                            <p>Our team brings years of clinical expertise.</p>
+                            <h3>Years Serving Wodonga</h3>
+                            <p>Proudly serving the community since opening in 2007.</p>
                         </div>
                         <!-- Fun Fact Item End -->
                     </div>
@@ -592,10 +789,10 @@
                         <!-- Fun Facts Footer List Start -->
                         <div class="fun-facts-footer-list wow fadeInUp" data-wow-delay="0.2s">
                             <ul>
-                                <li>License therapist</li>
-                                <li>Behavioral therapy</li>
-                                <li>Confidential therapy</li>
-                                <li>Family therapy</li>
+                                <li>Doctor-owned practice</li>
+                                <li>Patient-centred care</li>
+                                <li>Confidential consultations</li>
+                                <li>Comprehensive services</li>
                             </ul>
                         </div>
                         <!-- Fun Facts Footer List End -->
@@ -614,7 +811,7 @@
                                 </div>
                             </div>
                             <!-- Satisfy Client Images End -->    
-                            <p>Let's make something great work together. <a href="contact.html">Get Free Quote</a></p>
+                            <p>Need help with an appointment or question? <a href="contact.html">Contact Us</a></p>
                         </div>
                         <!-- Section Footer Text End -->
                     </div>
@@ -674,7 +871,7 @@
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">Personalized care design for real life progress</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our tailored therapy plans, evidence-based techniques, & supportive environment ensure that you gain practical tools to navigate challenges.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our evidence-based care, supportive environment, and experienced team help you navigate health challenges with confidence.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -778,7 +975,7 @@
                                 </div>
                             </div>
                             <!-- Satisfy Client Images End -->    
-                            <p>Let's make something great work together. <a href="contact.html">Get Free Quote</a></p>
+                            <p>Need help with an appointment or question? <a href="contact.html">Contact Us</a></p>
                         </div>
                         <!-- Section Footer Text End -->
                     </div>
@@ -798,7 +995,7 @@
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Meet Expert Team</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Caring experts guiding to path</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our team of experienced counsellors is dedicated to providing compassionate guidance and personalized support, helping you navigate challenges.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our team of experienced doctors and staff is dedicated to providing compassionate guidance and personalized support for your health.</p>
                     </div>
                     <!-- Section Title End -->
                 </div>                
@@ -904,7 +1101,7 @@
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->    
-                        <p>Let's make something great work together. <a href="team.html">Meet with our team</a></p>
+                        <p>Need help with an appointment or question? <a href="team.html">Meet with our team</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -1030,7 +1227,7 @@
                                         </div>
                                         <div class="testimonial-item-content-box">
                                             <div class="testimonial-item-content">
-                                                <p>“ I came to therapy feeling overwhelmed by anxiety and self doubt. From the very first session, I felt genuinely heard & understood. The personalize strategy I received helped me manage my thoughts, set healthier boundaries, & regain confidence in both my personal. ”</p>
+                                                <p>“ The doctors and staff at Elmwood Medical Centre take the time to listen. I always feel heard and well looked after during my visits. ”</p>
                                             </div>
                                             <div class="testimonial-item-author">
                                                 <div class="testimonial-author-image">
@@ -1040,7 +1237,7 @@
                                                 </div>
                                                 <div class="testimonial-author-content">
                                                     <h2>Sarah M.</h2>
-                                                    <p>Individual Therapy Client</p>
+                                                    <p>Elmwood Patient</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1073,7 +1270,7 @@
                                                 </div>
                                                 <div class="testimonial-author-content">
                                                     <h2>Olivia D.</h2>
-                                                    <p>Family Therapy Client</p>
+                                                    <p>Elmwood Patient</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1125,8 +1322,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Frequently Asked Questions</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Helping you understand our therapy process</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2S">We understand that seeking therapy is an important step. Explore common questions about appointments, privacy, treatment approaches.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Helping you understand our clinic process</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2S">We understand that seeking medical care is an important step. Explore common questions about appointments, privacy, and our approach to care.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -1160,7 +1357,7 @@
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="heading1">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    Q1. Is therapy only for serious mental health conditions?
+                                    Q1. Do I need an appointment to see a doctor?
                                 </button>
                             </h2>
                             <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
@@ -1171,9 +1368,9 @@
                                         </figure>
                                     </div>
                                     <div class="accordion-body-content">
-                                        <p>Counselling is a confidential process where you can explore your thoughts, emotions, and challenges with a trained professional.</p>
+                                        <p>You can make an appointment by calling 02 6056 2011 or booking online via HotDoc. Walk-in appointments are available and home visits can be discussed with your doctor.</p>
                                         <ul>
-                                            <li>It helps you gain clarity and develop strategy</li>
+                                            <li>Call reception for urgent appointments</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1185,7 +1382,7 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                             <h2 class="accordion-header" id="heading2">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    Q2. What is counselling and how can it help me?
+                                    Q2. How do I book an appointment?
                                 </button>
                             </h2>
                             <div id="collapse2" class="accordion-collapse collapse show" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
@@ -1196,9 +1393,9 @@
                                         </figure>
                                     </div>
                                     <div class="accordion-body-content">
-                                        <p>Counselling is a confidential process where you can explore your thoughts, emotions, and challenges with a trained professional.</p>
+                                        <p>Book over the phone by calling 02 6056 2011 or online via the HotDoc button. Not all appointments are available online, so please call if you can’t find a suitable time.</p>
                                         <ul>
-                                            <li>It helps you gain clarity and develop strategy</li>
+                                            <li>Online booking available via HotDoc</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1210,7 +1407,7 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                             <h2 class="accordion-header" id="heading3">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Q3. How do I know if therapy is right for me?
+                                    Q3. Do I need a long appointment?
                                 </button>
                             </h2>
                             <div id="collapse3" class="accordion-collapse collapse" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
@@ -1221,9 +1418,9 @@
                                         </figure>
                                     </div>
                                     <div class="accordion-body-content">
-                                        <p>Counselling is a confidential process where you can explore your thoughts, emotions, and challenges with a trained professional.</p>
+                                        <p>Book a standard appointment for a single health issue. Book a long appointment if you wish to discuss more than one health issue or expect to have a lot of questions.</p>
                                         <ul>
-                                            <li>It helps you gain clarity and develop strategy</li>
+                                            <li>Long appointments for multiple issues</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1235,7 +1432,7 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                             <h2 class="accordion-header" id="heading4">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Q4. Is everything discussed in therapy confidential?
+                                    Q4. Are consultations confidential?
                                 </button>
                             </h2>
                             <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
@@ -1246,9 +1443,9 @@
                                         </figure>
                                     </div>
                                     <div class="accordion-body-content">
-                                        <p>Counselling is a confidential process where you can explore your thoughts, emotions, and challenges with a trained professional.</p>
+                                        <p>Yes. Elmwood Medical Centre maintains professional standards of confidentiality for all information pertaining to patients.</p>
                                         <ul>
-                                            <li>It helps you gain clarity and develop strategy</li>
+                                            <li>Your information is kept confidential</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1271,9 +1468,9 @@
                                         </figure>
                                     </div>
                                     <div class="accordion-body-content">
-                                        <p>Counselling is a confidential process where you can explore your thoughts, emotions, and challenges with a trained professional.</p>
+                                        <p>Prior to your first consultation you will need to complete a registration form. Please arrive 10 minutes early, or complete the new patient form online before your visit.</p>
                                         <ul>
-                                            <li>It helps you gain clarity and develop strategy</li>
+                                            <li>New patient forms available online</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1301,7 +1498,7 @@
                         <span class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></span>
                         <div>
                             <strong>Visit our Location</strong>
-                            <p><a href="https://www.google.com/maps?ll=-36.136061,146.885455&amp;z=12&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=291+Beechworth+Rd+Wodonga+VIC+3690+Australia" target="_blank" rel="noopener noreferrer">7 McFarland Rd, Wodonga VIC</a></p>
+                            <p><a href="https://www.google.com/maps?q=7+McFarland+Rd,+Wodonga+VIC+3690" target="_blank" rel="noopener noreferrer">7 McFarland Rd, Wodonga VIC</a></p>
                         </div>
                     </div>
                     <div class="footer-contact-item">
@@ -1331,7 +1528,10 @@
                     <div class="footer-col footer-col-brand">
                         <a class="navbar-brand footer-brand" href="./">
                             <span class="brand-mark"><img src="images/logo-mark.png" alt=""></span>
-                            <span class="brand-text"><span class="brand-text-shine">Elmwood.</span></span>
+                            <span class="brand-text">
+							<span class="brand-text-shine">Elmwood.</span>
+							<span class="brand-sub"><span class="brand-sub-text">Medical Centre</span></span>
+						</span>
                         </a>
                         <h3>About Us</h3>
                         <p class="footer-brand-text">Elmwood Medical Centre opened its doors in 2007 and we are proud to be a local Doctor owned General Practice which offers a comprehensive range of medical services to everyone in the community. We are committed to supporting healthy outcomes for our patients.</p>
@@ -1346,7 +1546,7 @@
                         <ul>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="faqs.html">Frequently Asked Questions</a></li>
-                            <li><a href="contact.html">Careers</a></li>
+                            <li><a href="careers.html">Careers</a></li>
                             <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
@@ -1378,13 +1578,22 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="footer-credit-row">
+                    <p>Copyright 2026 Elmwood Medical Centre</p>
+                    <a class="footer-made-by" href="mailto:team@crossovermarketing.com.au" aria-label="Designed &amp; developed by Crossover Marketing Solutions">
+                        <span class="footer-made-by-label">Designed &amp; Developed by</span>
+                        <img src="images/made-by-logo.png" alt="Crossover Marketing Solutions">
+                        <span class="footer-made-by-copy">
+                            <span class="footer-made-by-name">Crossover Marketing Solutions</span>
+                            <span class="footer-made-by-tagline">Bridging Worlds, Driving Growth</span>
+                            <span class="footer-made-by-email">team@crossovermarketing.com.au</span>
+                        </span>
+                    </a>
+                </div>
             </div>
 
             <div class="footer-bottom-bar wow fadeInUp" data-wow-delay="0.15s">
-                <p>Copyright 2026 Elmwood Medical Centre</p>
-                <ul>
-                    <li><a href="https://practiceboost.com.au/" target="_blank" rel="noopener noreferrer">Website &amp; Marketing by Practice Boost</a></li>
-                </ul>
                 <a href="#" class="footer-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
             </div>
         </div>

@@ -36,10 +36,54 @@
 	<div class="preloader">
 		<div class="loading-container">
 			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+			<div id="loading-icon"><img src="images/logo-mark.png" alt="Elmwood Medical Centre"></div>
 		</div>
 	</div>
 	<!-- Preloader End -->
+
+
+    <!-- HotDoc Glass Modal Start -->
+    <div class="elmwood-hotdoc-modal" id="elmwoodHotdocModal" role="dialog" aria-modal="true" aria-labelledby="elmwoodHotdocTitle" hidden>
+        <div class="elmwood-hotdoc-backdrop" data-hotdoc-close></div>
+        <div class="elmwood-hotdoc-panel">
+            <div class="elmwood-hotdoc-glow" aria-hidden="true"></div>
+            <div class="elmwood-hotdoc-top">
+                <div class="elmwood-hotdoc-brand">
+                    <img src="images/logo-mark.png" alt="">
+                    <div>
+                        <span class="elmwood-hotdoc-kicker">HotDoc · Elmwood Medical Centre</span>
+                        <h2 id="elmwoodHotdocTitle">Online Patient Services</h2>
+                    </div>
+                </div>
+                <button type="button" class="elmwood-hotdoc-x" data-hotdoc-close aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="elmwood-hotdoc-tabs" role="tablist" aria-label="HotDoc options">
+                <button type="button" class="elmwood-hotdoc-tab is-active" role="tab" aria-selected="true" data-hotdoc-tab="form" data-hotdoc-src="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form">Online Form</button>
+                <button type="button" class="elmwood-hotdoc-tab" role="tab" aria-selected="false" data-hotdoc-tab="book" data-hotdoc-src="https://www.hotdoc.com.au/medical-centres/wodonga-VIC-3690/elmwood-medical-centre/doctors">Book on HotDoc</button>
+            </div>
+
+            <div class="elmwood-hotdoc-frame-wrap">
+                <div class="elmwood-hotdoc-loader" data-hotdoc-loader>
+                    <span class="elmwood-hotdoc-spinner" aria-hidden="true"></span>
+                    <p>Loading HotDoc…</p>
+                </div>
+                <iframe class="elmwood-hotdoc-frame" data-hotdoc-frame title="HotDoc online form" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="elmwood-hotdoc-fallback" data-hotdoc-fallback hidden>
+                    <p>If the form does not load here, continue securely on HotDoc.</p>
+                    <a class="btn-default" data-hotdoc-external href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Continue on HotDoc</a>
+                </div>
+            </div>
+
+            <div class="elmwood-hotdoc-actions">
+                <button type="button" class="elmwood-hotdoc-cancel" data-hotdoc-close>Cancel</button>
+                <a class="elmwood-hotdoc-openout" data-hotdoc-external href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Open in new tab <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- HotDoc Glass Modal End -->
 
     <!-- Header Start -->
 	<header class="main-header active-sticky-header">
@@ -48,8 +92,11 @@
 				<div class="container">
 					<!-- Logo Start -->
 					<a class="navbar-brand" href="./">
-						<span class="brand-mark"><img src="images/logo-mark.png" alt=""></span>
-						<span class="brand-text"><span class="brand-text-shine">Elmwood.</span></span>
+						<span class="brand-mark"><img src="images/logo-mark.png" alt="Elmwood Medical Centre"></span>
+						<span class="brand-text">
+							<span class="brand-text-shine">Elmwood.</span>
+							<span class="brand-sub"><span class="brand-sub-text">Medical Centre</span></span>
+						</span>
 					</a>
 					<!-- Logo End -->
 
@@ -58,39 +105,178 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="case-study.html">Case Study</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="case-study-single.html">Case Study Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing Plan</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                <li class="nav-item submenu has-megamenu">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                    <div class="elmwood-megamenu" role="region" aria-label="Services menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-services">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-4">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">General Practice</span>
+                                                    <ul>
+                                                        <li><a href="service-womens-health.html">Women's Health</a></li>
+                                                        <li><a href="service-mens-health.html">Men's Health</a></li>
+                                                        <li><a href="service-childrens-health.html">Children's Health</a></li>
+                                                        <li><a href="service-sexual-health.html">Sexual Health</a></li>
+                                                        <li><a href="service-mental-health.html">Mental Health</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Checks &amp; Clinics</span>
+                                                    <ul>
+                                                        <li><a href="service-skin-cancer-clinic.html">Skin Cancer Clinic</a></li>
+                                                        <li><a href="service-preventative-health.html">Preventative Health</a></li>
+                                                        <li><a href="service-vaccinations.html">Vaccinations</a></li>
+                                                        <li><a href="service-employment-health.html">Employment Health</a></li>
+                                                        <li><a href="service-stop-smoking-clinic.html">Stop Smoking Clinic</a></li>
+                                                        <li><a href="service-pathology.html">Pathology</a></li>
+                                                        <li><a href="service-fracture-clinic.html">Fracture Clinic</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Special Care</span>
+                                                    <ul>
+                                                        <li><a href="service-procedural-clinic.html">Procedural Clinic</a></li>
+                                                        <li><a href="service-allied-health.html">Allied Health</a></li>
+                                                        <li><a href="service-veteran-affairs.html">Veteran Affairs</a></li>
+                                                        <li><a href="service-indigenous-health.html">Indigenous Health</a></li>
+                                                        <li><a href="service-public-servants.html">Public Servants</a></li>
+                                                        <li><a href="service-lgbtqi.html">LGBTQI+</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Partners</span>
+                                                    <ul>
+                                                        <li><a href="https://completeveteranhealth.com.au/" target="_blank" rel="noopener noreferrer">Veteran Health</a></li>
+                                                        <li><a href="services.html">View All Services</a></li>
+                                                        <li><a href="book-appointment.html">Book Appointment</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card" href="book-appointment.html">
+                                                <img src="images/service-image-6.jpg" alt="Family medicine at Elmwood">
+                                                <span class="elmwood-megamenu-card-body">
+                                                    <strong>Family Medicine</strong>
+                                                    <em>Comprehensive care for all ages</em>
+                                                    <span class="elmwood-megamenu-card-cta">Book GP Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="service-womens-health.html">Women's Health</a></li>
+                                        <li><a href="service-mens-health.html">Men's Health</a></li>
+                                        <li><a href="service-childrens-health.html">Children's Health</a></li>
+                                        <li><a href="service-sexual-health.html">Sexual Health</a></li>
+                                        <li><a href="service-mental-health.html">Mental Health</a></li>
+                                        <li><a href="service-skin-cancer-clinic.html">Skin Cancer Clinic</a></li>
+                                        <li><a href="service-preventative-health.html">Preventative Health</a></li>
+                                        <li><a href="service-vaccinations.html">Vaccinations</a></li>
+                                        <li><a href="service-employment-health.html">Employment Health</a></li>
+                                        <li><a href="service-stop-smoking-clinic.html">Stop Smoking Clinic</a></li>
+                                        <li><a href="service-procedural-clinic.html">Procedural Clinic</a></li>
+                                        <li><a href="service-allied-health.html">Allied Health</a></li>
+                                        <li><a href="service-veteran-affairs.html">Veteran Affairs</a></li>
+                                        <li><a href="service-indigenous-health.html">Indigenous Health</a></li>
+                                        <li><a href="service-public-servants.html">Public Servants</a></li>
+                                        <li><a href="service-lgbtqi.html">LGBTQI+</a></li>
+                                        <li><a href="service-pathology.html">Pathology</a></li>
+                                        <li><a href="service-fracture-clinic.html">Fracture Clinic</a></li>
+                                        <li><a href="https://completeveteranhealth.com.au/" target="_blank" rel="noopener noreferrer">Veteran Health</a></li>
+                                        <li><a href="services.html">View All Services</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                <li class="nav-item submenu has-megamenu has-megamenu-align">
+                                    <a class="nav-link" href="team.html">Our Team</a>
+                                    <div class="elmwood-megamenu elmwood-megamenu-align" role="region" aria-label="Our Team menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-team">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-2">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Meet Our Doctors</span>
+                                                    <ul>
+                                                        <li><a href="team.html">All Doctors</a></li>
+                                                        <li><a href="doctor-joseph.html">Dr Joseph</a></li>
+                                                        <li><a href="doctor-warren.html">Dr Warren</a></li>
+                                                        <li><a href="doctor-ayesha.html">Dr Ayesha</a></li>
+                                                        <li><a href="doctor-neetu-grover.html">Dr Neetu Grover</a></li>
+                                                        <li><a href="doctor-bhavin-purohit.html">Dr Bhavin Purohit</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Our Team</span>
+                                                    <ul>
+                                                        <li><a href="doctor-sinto-kunjachan.html">Dr Sinto Kunjachan</a></li>
+                                                        <li><a href="doctor-lyza-cara.html">Dr Lyza Cara</a></li>
+                                                        <li><a href="doctor-iby-ann-xavier.html">Dr Iby Ann Xavier</a></li>
+                                                        <li><a href="doctor-sonam-topgyal.html">Dr Sonam Topgyal</a></li>
+                                                        <li><a href="doctor-margi-patel.html">Margi Patel — Dietitian</a></li>
+                                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card elmwood-megamenu-card--photo" href="team.html" aria-label="Meet the Elmwood doctors">
+                                                <img src="images/about-us-image-1-prime.jpg" alt="Elmwood doctors">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="team.html">All Doctors</a></li>
+                                        <li><a href="doctor-joseph.html">Dr Joseph</a></li>
+                                        <li><a href="doctor-warren.html">Dr Warren</a></li>
+                                        <li><a href="doctor-ayesha.html">Dr Ayesha</a></li>
+                                        <li><a href="doctor-neetu-grover.html">Dr Neetu Grover</a></li>
+                                        <li><a href="doctor-bhavin-purohit.html">Dr Bhavin Purohit</a></li>
+                                        <li><a href="doctor-sinto-kunjachan.html">Dr Sinto Kunjachan</a></li>
+                                        <li><a href="doctor-lyza-cara.html">Dr Lyza Cara</a></li>
+                                        <li><a href="doctor-iby-ann-xavier.html">Dr Iby Ann Xavier</a></li>
+                                        <li><a href="doctor-sonam-topgyal.html">Dr Sonam Topgyal</a></li>
+                                        <li><a href="doctor-margi-patel.html">Margi Patel — Dietitian</a></li>
+                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu has-megamenu has-megamenu-align">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                    <div class="elmwood-megamenu elmwood-megamenu-align" role="region" aria-label="About Us menu">
+                                        <div class="elmwood-megamenu-panel elmwood-megamenu-panel-about">
+                                            <div class="elmwood-megamenu-cols elmwood-megamenu-cols-2">
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Our Clinic</span>
+                                                    <ul>
+                                                        <li><a href="new-patients.html">New Patients</a></li>
+                                                        <li><a href="careers.html">Careers</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="elmwood-megamenu-col">
+                                                    <span class="elmwood-megamenu-label">Get Started</span>
+                                                    <ul>
+                                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                                        <li><a href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Online Registration Form</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="elmwood-megamenu-card elmwood-megamenu-card--photo" href="new-patients.html" aria-label="New patients">
+                                                <img src="images/about-us-image-2-prime.jpg" alt="New patients welcome at Elmwood">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="megamenu-fallback">
+                                        <li><a href="new-patients.html">New Patients</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="book-appointment.html">Book Online</a></li>
+                                        <li><a href="https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form" target="_blank" rel="noopener noreferrer">Online Registration Form</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="gallery.html">Our Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
                                 <li class="nav-item highlighted-menu"><a class="nav-link" href="book-appointment.html">Book Online</a></li>
                             </ul>
                         </div>
                         
-                        <!-- Header Btn Start — toggles Book Online / Book Skin Check -->
+                        <!-- Header Btn Start -->
                         <div class="header-btn">
-                            <a href="book-appointment.html" class="btn-default book-cta-toggle"
-                               data-label-online="Book Online"
-                               data-label-skin="Book Skin Check"
-                               data-href-online="book-appointment.html"
-                               data-href-skin="https://elmwoodmedical.com.au/services/skin-cancer-clinic/">
-                                <span class="book-cta-text">Book Online</span>
-                            </a>
+                            <button type="button" class="btn-default elmwood-hotdoc-trigger" data-hotdoc-open aria-haspopup="dialog"><span class="elmwood-btn-text-shimmer">Online Form</span></button>
+                            <a href="book-appointment.html" class="btn-default">Book Now</a>
                         </div>
                         <!-- Header Btn End -->
                     </div>
@@ -256,7 +442,7 @@
                         <span class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></span>
                         <div>
                             <strong>Visit our Location</strong>
-                            <p><a href="https://www.google.com/maps?ll=-36.136061,146.885455&amp;z=12&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=291+Beechworth+Rd+Wodonga+VIC+3690+Australia" target="_blank" rel="noopener noreferrer">7 McFarland Rd, Wodonga VIC</a></p>
+                            <p><a href="https://www.google.com/maps?q=7+McFarland+Rd,+Wodonga+VIC+3690" target="_blank" rel="noopener noreferrer">7 McFarland Rd, Wodonga VIC</a></p>
                         </div>
                     </div>
                     <div class="footer-contact-item">
@@ -286,7 +472,10 @@
                     <div class="footer-col footer-col-brand">
                         <a class="navbar-brand footer-brand" href="./">
                             <span class="brand-mark"><img src="images/logo-mark.png" alt=""></span>
-                            <span class="brand-text"><span class="brand-text-shine">Elmwood.</span></span>
+                            <span class="brand-text">
+							<span class="brand-text-shine">Elmwood.</span>
+							<span class="brand-sub"><span class="brand-sub-text">Medical Centre</span></span>
+						</span>
                         </a>
                         <h3>About Us</h3>
                         <p class="footer-brand-text">Elmwood Medical Centre opened its doors in 2007 and we are proud to be a local Doctor owned General Practice which offers a comprehensive range of medical services to everyone in the community. We are committed to supporting healthy outcomes for our patients.</p>
@@ -301,7 +490,7 @@
                         <ul>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="faqs.html">Frequently Asked Questions</a></li>
-                            <li><a href="contact.html">Careers</a></li>
+                            <li><a href="careers.html">Careers</a></li>
                             <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
@@ -333,13 +522,22 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="footer-credit-row">
+                    <p>Copyright 2026 Elmwood Medical Centre</p>
+                    <a class="footer-made-by" href="mailto:team@crossovermarketing.com.au" aria-label="Designed &amp; developed by Crossover Marketing Solutions">
+                        <span class="footer-made-by-label">Designed &amp; Developed by</span>
+                        <img src="images/made-by-logo.png" alt="Crossover Marketing Solutions">
+                        <span class="footer-made-by-copy">
+                            <span class="footer-made-by-name">Crossover Marketing Solutions</span>
+                            <span class="footer-made-by-tagline">Bridging Worlds, Driving Growth</span>
+                            <span class="footer-made-by-email">team@crossovermarketing.com.au</span>
+                        </span>
+                    </a>
+                </div>
             </div>
 
             <div class="footer-bottom-bar wow fadeInUp" data-wow-delay="0.15s">
-                <p>Copyright 2026 Elmwood Medical Centre</p>
-                <ul>
-                    <li><a href="https://practiceboost.com.au/" target="_blank" rel="noopener noreferrer">Website &amp; Marketing by Practice Boost</a></li>
-                </ul>
                 <a href="#" class="footer-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
             </div>
         </div>

@@ -33,6 +33,57 @@
 		prependTo : '.responsive-menu'
 	});
 
+	/* Premium mega menu — click/touch toggle + outside close */
+	(function initElmwoodMegamenu(){
+		var $items = $('#menu > .has-megamenu');
+		if(!$items.length){ return; }
+
+		function closeFlyouts($scope){
+			($scope || $items).find('.has-flyout.is-open').removeClass('is-open');
+		}
+
+		$items.each(function(){
+			var $item = $(this);
+			var $link = $item.children('.nav-link');
+
+			$link.on('click', function(e){
+				if(window.matchMedia('(max-width: 991px)').matches){ return; }
+				// Allow navigation on second click when already open
+				if(!$item.hasClass('is-open')){
+					e.preventDefault();
+					$items.not($item).removeClass('is-open');
+					closeFlyouts();
+					$item.addClass('is-open');
+				}
+			});
+		});
+
+		/* Nested Services flyouts (General Practice / Other) */
+		$(document).on('click', '.elmwood-services-list > li.has-flyout > a', function(e){
+			if(window.matchMedia('(max-width: 991px)').matches){ return; }
+			var $fly = $(this).closest('.has-flyout');
+			if(!$fly.hasClass('is-open')){
+				e.preventDefault();
+				$fly.siblings('.has-flyout').removeClass('is-open');
+				$fly.addClass('is-open');
+			}
+		});
+
+		$(document).on('click', function(e){
+			if(!$(e.target).closest('.has-megamenu').length){
+				$items.removeClass('is-open');
+				closeFlyouts();
+			}
+		});
+
+		$(document).on('keydown', function(e){
+			if(e.key === 'Escape'){
+				$items.removeClass('is-open');
+				closeFlyouts();
+			}
+		});
+	})();
+
 	if($("a[href='#top']").length){
 		$(document).on("click", "a[href='#top']", function() {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -404,7 +455,7 @@
 
 	/* Zoom Gallery screenshot */
 	$('.gallery-items').magnificPopup({
-		delegate: 'a',
+		delegate: 'a:not(.popup-video)',
 		type: 'image',
 		closeOnContentClick: false,
 		closeBtnInside: false,
@@ -423,6 +474,28 @@
 			}
 		}
 	});
+
+	/* Elmwood gallery filter chips (All / Photos / Videos) */
+	(function initElmwoodGalleryFilters(){
+		var $filters = $('.elmwood-gallery-filters');
+		var $items = $('.elmwood-gallery-item');
+		if(!$filters.length || !$items.length){ return; }
+
+		$filters.on('click', '[data-gallery-filter]', function(){
+			var $btn = $(this);
+			var filter = $btn.data('gallery-filter');
+
+			$filters.find('[data-gallery-filter]').removeClass('is-active').attr('aria-selected', 'false');
+			$btn.addClass('is-active').attr('aria-selected', 'true');
+
+			$items.each(function(){
+				var $item = $(this);
+				var type = $item.data('type');
+				var show = filter === 'all' || type === filter;
+				$item.toggleClass('is-hidden', !show);
+			});
+		});
+	})();
 
 	/* Contact form validation - offline (no remote POST) */
 	var $contactform = $("#contactForm");
@@ -521,38 +594,6 @@
 	}
 	/* Service Item List End */
 
-	/* Book Online / Book Skin Check toggle */
-	(function initBookCtaToggle(){
-		var $cta = $('.book-cta-toggle');
-		if(!$cta.length){ return; }
-
-		var mode = 'online';
-		var timer;
-
-		function applyMode(next){
-			mode = next;
-			$cta.addClass('is-swapping');
-			window.setTimeout(function(){
-				var label = mode === 'skin' ? $cta.data('label-skin') : $cta.data('label-online');
-				var href = mode === 'skin' ? $cta.data('href-skin') : $cta.data('href-online');
-				$cta.attr({'href': href, 'data-mode': mode});
-				$cta.find('.book-cta-text').text(label);
-				$cta.removeClass('is-swapping');
-			}, 180);
-		}
-
-		function startRotate(){
-			window.clearInterval(timer);
-			timer = window.setInterval(function(){
-				applyMode(mode === 'online' ? 'skin' : 'online');
-			}, 3800);
-		}
-
-		$cta.on('mouseenter focusin', function(){ window.clearInterval(timer); });
-		$cta.on('mouseleave focusout', startRotate);
-		startRotate();
-	})();
-
 	/* Doctors show more — reveal 4 at a time */
 	$(document).on('click', '.doctors-show-more', function(){
 		var $grid = $('.doctors-grid');
@@ -621,6 +662,134 @@
 		});
 
 		window.setTimeout(openNotice, 650);
+	})();
+
+	/* Premium glass HotDoc / Online Form modal */
+	(function initElmwoodHotdocModal(){
+		var $modal = $('#elmwoodHotdocModal');
+		if(!$modal.length){ return; }
+
+		var $frame = $modal.find('[data-hotdoc-frame]');
+		var $loader = $modal.find('[data-hotdoc-loader]');
+		var $fallback = $modal.find('[data-hotdoc-fallback]');
+		var $external = $modal.find('[data-hotdoc-external]');
+		var $html = $('html');
+		var $body = $('body');
+		var loadTimer;
+		var lockedScrollY = 0;
+		var scrollLocked = false;
+
+		function lockPageScroll(){
+			if(scrollLocked){ return; }
+			lockedScrollY = window.scrollY || window.pageYOffset || 0;
+			$html.addClass('elmwood-hotdoc-open');
+			$body.addClass('elmwood-hotdoc-open');
+			$body.css({
+				position: 'fixed',
+				top: (-lockedScrollY) + 'px',
+				left: '0',
+				right: '0',
+				width: '100%'
+			});
+			scrollLocked = true;
+		}
+
+		function unlockPageScroll(){
+			if(!scrollLocked){ return; }
+			$html.removeClass('elmwood-hotdoc-open');
+			$body.removeClass('elmwood-hotdoc-open');
+			$body.css({
+				position: '',
+				top: '',
+				left: '',
+				right: '',
+				width: ''
+			});
+			window.scrollTo(0, lockedScrollY);
+			scrollLocked = false;
+		}
+
+		function currentSrc(){
+			var $tab = $modal.find('.elmwood-hotdoc-tab.is-active');
+			return $tab.data('hotdoc-src') || 'https://www.hotdoc.com.au/forms/elmwood-medical-centre-new-patient-registration-form';
+		}
+
+		function setExternal(href){
+			$external.attr('href', href);
+		}
+
+		function loadSrc(src){
+			window.clearTimeout(loadTimer);
+			$loader.removeAttr('hidden').show();
+			$fallback.attr('hidden', true);
+			$frame.css('opacity', 0.25);
+			setExternal(src);
+			$frame.attr('src', src);
+			loadTimer = window.setTimeout(function(){
+				$loader.hide();
+				$frame.css('opacity', 1);
+				$fallback.removeAttr('hidden');
+			}, 2200);
+		}
+
+		function openModal(){
+			lockPageScroll();
+			$modal.removeAttr('hidden').addClass('is-open');
+			loadSrc(currentSrc());
+		}
+
+		function closeModal(){
+			$modal.removeClass('is-open');
+			window.clearTimeout(loadTimer);
+			unlockPageScroll();
+			window.setTimeout(function(){
+				$modal.attr('hidden', true);
+				$frame.attr('src', 'about:blank');
+			}, 280);
+		}
+
+		$(document).on('click', '[data-hotdoc-open]', function(e){
+			e.preventDefault();
+			openModal();
+		});
+
+		$modal.on('click', '[data-hotdoc-close]', function(e){
+			e.preventDefault();
+			closeModal();
+		});
+
+		$modal.on('click', '[data-hotdoc-tab]', function(e){
+			e.preventDefault();
+			var $tab = $(this);
+			$modal.find('[data-hotdoc-tab]').removeClass('is-active').attr('aria-selected', 'false');
+			$tab.addClass('is-active').attr('aria-selected', 'true');
+			loadSrc($tab.data('hotdoc-src'));
+		});
+
+		$frame.on('load', function(){
+			window.clearTimeout(loadTimer);
+			$loader.hide();
+			$frame.css('opacity', 1);
+		});
+
+		/* Stop wheel/touch from chaining to page behind modal */
+		$modal.on('wheel', function(e){
+			if(!$(e.target).closest('.elmwood-hotdoc-panel').length){
+				e.preventDefault();
+			}
+		});
+
+		$modal.on('touchmove', function(e){
+			if(!$(e.target).closest('.elmwood-hotdoc-panel').length){
+				e.preventDefault();
+			}
+		});
+
+		$(document).on('keydown', function(e){
+			if(e.key === 'Escape' && $modal.hasClass('is-open')){
+				closeModal();
+			}
+		});
 	})();
 
 	
