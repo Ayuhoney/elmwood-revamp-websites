@@ -553,5 +553,75 @@
 		startRotate();
 	})();
 
+	/* Doctors show more — reveal 4 at a time */
+	$(document).on('click', '.doctors-show-more', function(){
+		var $grid = $('.doctors-grid');
+		var $btn = $(this);
+		var $wrap = $btn.closest('.doctors-more-wrap');
+		if(!$grid.length){ return; }
+
+		var step = parseInt($grid.attr('data-step'), 10) || 4;
+		var $hidden = $grid.find('.doctor-col:not(.is-visible)');
+		$hidden.slice(0, step).addClass('is-visible is-revealing');
+
+		if(!$grid.find('.doctor-col:not(.is-visible)').length){
+			$wrap.addClass('is-done');
+			$btn.attr('aria-expanded', 'true').prop('disabled', true);
+			$btn.find('.doctors-show-more-text').text('All Doctors Shown');
+		}
+	});
+
+	/* About news video */
+	$(document).on('click', '.about-news-play', function(e){
+		e.preventDefault();
+		var $frame = $(this).closest('.about-news-video-frame');
+		var video = $frame.find('video').get(0);
+		if(!video){ return; }
+		$frame.addClass('is-playing');
+		video.setAttribute('controls', 'controls');
+		var playPromise = video.play();
+		if(playPromise && playPromise.catch){
+			playPromise.catch(function(){});
+		}
+	});
+
+	/* Billing notice popup — once per browser session (first site open only) */
+	(function(){
+		var $notice = $('#elmwoodNotice');
+		if(!$notice.length){ return; }
+
+		var storageKey = 'elmwoodNoticeSeen';
+		try{
+			if(window.sessionStorage.getItem(storageKey) === '1'){ return; }
+		}catch(err){}
+
+		function openNotice(){
+			$notice.removeAttr('hidden').addClass('is-open');
+			$('body').addClass('elmwood-notice-open');
+		}
+
+		function closeNotice(){
+			try{ window.sessionStorage.setItem(storageKey, '1'); }catch(err){}
+			$notice.removeClass('is-open');
+			$('body').removeClass('elmwood-notice-open');
+			window.setTimeout(function(){
+				$notice.attr('hidden', true);
+			}, 280);
+		}
+
+		$notice.on('click', '[data-notice-close]', function(e){
+			e.preventDefault();
+			closeNotice();
+		});
+
+		$(document).on('keydown', function(e){
+			if(e.key === 'Escape' && $notice.hasClass('is-open')){
+				closeNotice();
+			}
+		});
+
+		window.setTimeout(openNotice, 650);
+	})();
+
 	
 })(jQuery);

@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "neetu-grover",
+    "name": "Dr Neetu Grover",
+    "title": "MBBS, FRACGP, Adv DRANZCOG, Skin Cancer",
+    "file": "images/doctors/neetu-grover.jpg",
+    "bio": "Dr Neetu Grover MBBS, FRACGP, Adv DRANZCOG - Senior GP has been providing general medical services for the past 20 years. She lives in Wodonga with her family, raising 3 of her children in the local community and has a passion for Rural General Practice.",
+    "url": "https://elmwoodmedical.com.au/dr-grover/"
+  },
+  {
+    "slug": "ayesha",
+    "name": "Dr Ayesha",
+    "title": "General Practitioner",
+    "file": "images/doctors/ayesha.jpg",
+    "bio": "Dr. Ayesha has worked in both General Practice and the hospital setting and enjoys all aspects of General Practice.",
+    "url": "https://elmwoodmedical.com.au/dr-ayesha/"
+  },
+  {
+    "slug": "joseph",
+    "name": "Dr Joseph",
+    "title": "General Practitioner",
+    "file": "images/doctors/joseph.jpg",
+    "bio": "Dr. Joseph has years of clinical experience, predominantly in primary care.",
+    "url": "https://elmwoodmedical.com.au/dr-joseph/"
+  },
+  {
+    "slug": "sinto-kunjachan",
+    "name": "Dr Sinto Kunjachan",
+    "title": "General Practitioner",
+    "file": "images/doctors/sinto-kunjachan.jpg",
+    "bio": "Dr Sinto has years of experience in General practice and in Hospital.",
+    "url": "https://elmwoodmedical.com.au/Dr-Sinto-Kunjachan/"
+  },
+  {
+    "slug": "bhavin-purohit",
+    "name": "Dr Bhavin Purohit",
+    "title": "General Practitioner",
+    "file": "images/doctors/bhavin-purohit.jpg",
+    "bio": "Dr Bhavin (MD AASC DNB MRCGP) is qualified in India, United Kingdom and United States, and is a highly experienced family medicine doctor and specialist with over 15 years of experience.",
+    "url": "https://elmwoodmedical.com.au/dr-bhavin-purohit/"
+  },
+  {
+    "slug": "lyza-cara",
+    "name": "Dr Lyza Cara",
+    "title": "General Practitioner",
+    "file": "images/doctors/lyza-cara.jpg",
+    "bio": "Dr Lyza Cara has been working in Wodonga since 2023 and is a warm and experienced General Practitioner who loves caring for people at every stage of life. She values building long-term relationships with her patients and enjoys being part of their health journey \u2014 whether it\u2019s helping with day-to-day health concerns or supporting long-term wellness goals.",
+    "url": "https://elmwoodmedical.com.au/dr-lyza-cara/"
+  },
+  {
+    "slug": "iby-ann-xavier",
+    "name": "Dr Iby Ann Xavier",
+    "title": "General Practitioner",
+    "file": "images/doctors/iby-ann-xavier.jpg",
+    "bio": "Dr. Iby is a highly experienced family medicine doctor and specialist with over 12 years of experience.",
+    "url": "https://elmwoodmedical.com.au/dr-iby-ann-xavier/"
+  },
+  {
+    "slug": "sonam-topgyal",
+    "name": "Dr Sonam Topgyal",
+    "title": "General Practitioner",
+    "file": "images/doctors/sonam-topgyal.jpg",
+    "bio": "Dr Sonam Topgyal is a Family Physician with over 15 years of clinical experience and a special interest in child health and emergency medicine.",
+    "url": "https://elmwoodmedical.com.au/dr-sonam-topgyal/"
+  },
+  {
+    "slug": "warren",
+    "name": "Dr Warren",
+    "title": "General Practitioner",
+    "file": "images/doctors/warren.jpg",
+    "bio": "Dr Warren is an experienced doctor with over 15 years of clinical experience. He provides comprehensive general practice care with a strong focus on patient-centred, family-focused medicine.",
+    "url": "https://elmwoodmedical.com.au/dr-warren/"
+  },
+  {
+    "slug": "margi-patel",
+    "name": "Margi Patel",
+    "title": "Registered Dietitian",
+    "file": "images/doctors/margi-patel.jpg",
+    "bio": "Margi Patel is a passionate and experienced Dietitian providing tailored, evidence-based nutrition care to a wide range of populations. She works collaboratively with individuals to promote nutrition adequacy, independence, and long-term health outcomes. Her approach is person-centred, evidence-based, and non-judgmental, empowering clients to achieve their individual nutrition goals with confidence.",
+    "url": "https://elmwoodmedical.com.au/margi-patel-registered-dietitian/"
+  }
+]

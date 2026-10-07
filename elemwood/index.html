@@ -41,6 +41,31 @@
 	</div>
 	<!-- Preloader End -->
 
+    <!-- Billing Notice Popup Start -->
+    <div class="elmwood-notice" id="elmwoodNotice" role="dialog" aria-modal="true" aria-labelledby="elmwoodNoticeTitle" hidden>
+        <div class="elmwood-notice-backdrop" data-notice-close></div>
+        <div class="elmwood-notice-panel">
+            <button type="button" class="elmwood-notice-close" data-notice-close aria-label="Close notice">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="elmwood-notice-glow" aria-hidden="true"></div>
+            <span class="elmwood-notice-badge">Clinic Update</span>
+            <h2 id="elmwoodNoticeTitle">Changes 1 Jan 2026</h2>
+            <ul class="elmwood-notice-list">
+                <li>Bulk Billing for All Adults 70 Years &amp; Over (excludes Skin Checks &amp; Procedures) – No First Gap Applies</li>
+                <li>Bulk Billing for All Kids, Teenagers &amp; Concession / Senior Card Holders after the First Gap (excludes Skin Checks &amp; Procedures)</li>
+                <li>Skin Cancer Checks available. Book Today!</li>
+            </ul>
+            <div class="elmwood-notice-brand">
+                <img src="images/logo-mark.png" alt="">
+                <span>Elmwood Medical Centre</span>
+            </div>
+            <p class="elmwood-notice-disclaimer">Elmwood Medical Centre is a mixed-billed clinic. Bulk-billed appointments are available with selected doctors only and will be clearly displayed next to the doctor’s name when booking through HotDoc. All over 70 Years are bulk billed for standard consultation, and those who have paid the first GAP. Additional fees apply for services such as wound dressings, ECGs, skin checks, procedures, and other non-standard consultations. Please speak with our reception team before your appointment if you would like further information about applicable fees.</p>
+            <button type="button" class="elmwood-notice-btn" data-notice-close>Got it</button>
+        </div>
+    </div>
+    <!-- Billing Notice Popup End -->
+
     <!-- Header Start -->
 	<header class="main-header active-sticky-header">
 		<div class="header-sticky">
@@ -300,8 +325,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Trusted Guidance for Life's Emotional challenges</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We provide compassionate, personalized counselling to help you process challenge rebuild confidence, and develop the emotional resilience.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">About Our Medical Centre in Wodonga</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Elmwood Medical Centre has been providing trusted healthcare to the Wodonga community since 2007. As a locally doctor-owned GP clinic, our team delivers high-quality, patient-centred care for individuals and families at every stage of life.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -314,7 +339,7 @@
                                 </div>
                                 <div class="about-us-item-content-prime">
                                     <h3>Our Mission</h3>
-                                    <p>Our mission is to provide compassionate, confidential,</p>
+                                    <p>Patient-centred care that supports better health outcomes for local families.</p>
                                 </div>
                             </div>
                             <!-- About Us Item End -->
@@ -325,8 +350,8 @@
                                     <img src="images/icon-about-us-item-2-prime.svg" alt="">
                                 </div>
                                 <div class="about-us-item-content-prime">
-                                    <h3>Our Vision</h3>
-                                    <p>Our vision is to build a community where mental  </p>
+                                    <h3>Our Values</h3>
+                                    <p>Respect, confidentiality, teamwork and continuous improvement in every visit.</p>
                                 </div>
                             </div>
                             <!-- About Us Item End -->
@@ -336,10 +361,10 @@
                         <!-- About Us List Start -->
                         <div class="about-us-list-prime wow fadeInUp" data-wow-delay="0.6s">
                             <ul>
-                                <li>Confidential & Safe Environment</li>
-                                <li>Goal-Oriented Therapy Sessions</li>
-                                <li>Flexible Appointment Scheduling</li>
-                                <li>Goal-Oriented Therapy Sessions</li>
+                                <li>Patient-Centred Care</li>
+                                <li>Best Practice Standards</li>
+                                <li>Professional Confidentiality</li>
+                                <li>Respect, Support & Teamwork</li>
                             </ul>
                         </div>
                         <!-- About Us List End -->
@@ -366,6 +391,9 @@
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Our Services</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Comprehensive GP services for every stage of life</h2>
+                        <div class="services-gp-subtext wow fadeInUp" data-wow-delay="0.2s">
+                            <p class="services-gp-shimmer">Our Wodonga Medical Centre is proud to offer a wide range of comprehensive services to meet the needs of all our patients including children, adults and aged care.</p>
+                        </div>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -376,9 +404,9 @@
                     <!-- Service Item Start -->
                     <div class="service-item-prime wow fadeInUp">
                         <div class="service-item-image-prime">
-                            <a href="service-single.html" data-cursor-text="View">
+                            <a href="service-mental-health.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/service-image-4.jpg" alt="">
+                                    <img src="images/service-image-4.jpg" alt="Mental Health">
                                 </figure>
                             </a>
                             <div class="icon-box">
@@ -386,8 +414,8 @@
                             </div>
                         </div>
                         <div class="service-item-content-prime">
-                            <h2><a href="service-single.html">General Practice</a></h2>
-                            <p>Experienced male & female GPs providing everyday care for the whole family.</p>
+                            <h2><a href="service-mental-health.html">Mental Health</a></h2>
+                            <p>Our GP’s are experienced in the treatment of depression, stress management, addiction, anxiety, grief and other mental health issues.</p>
                         </div>
                     </div>
                     <!-- Service Item End -->
@@ -397,9 +425,9 @@
                     <!-- Service Item Start -->
                     <div class="service-item-prime wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item-image-prime">
-                            <a href="service-single.html" data-cursor-text="View">
+                            <a href="service-skin-cancer-clinic.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/service-image-5.jpg" alt="">
+                                    <img src="images/service-image-5.jpg" alt="Skin Cancer Clinic">
                                 </figure>
                             </a>
                             <div class="icon-box">
@@ -407,8 +435,8 @@
                             </div>
                         </div>
                         <div class="service-item-content-prime">
-                            <h2><a href="service-single.html">Skin Cancer Clinic</a></h2>
-                            <p>Expert skin checks and treatment at Elmwood Skin Cancer Clinic.</p>
+                            <h2><a href="service-skin-cancer-clinic.html">Skin Cancer Clinic</a></h2>
+                            <p>Elmwood Skin Cancer Clinic — expert skin checks and care located within our medical centre.</p>
                         </div>
                     </div>
                     <!-- Service Item End -->
@@ -418,9 +446,9 @@
                     <!-- Service Item Start -->
                     <div class="service-item-prime wow fadeInUp" data-wow-delay="0.4s">
                         <div class="service-item-image-prime">
-                            <a href="service-single.html" data-cursor-text="View">
+                            <a href="service-womens-health.html" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="images/service-image-6.jpg" alt="">
+                                    <img src="images/service-image-6.jpg" alt="Women's Health">
                                 </figure>
                             </a>
                             <div class="icon-box">
@@ -428,8 +456,8 @@
                             </div>
                         </div>
                         <div class="service-item-content-prime">
-                            <h2><a href="service-single.html">Women's Health</a></h2>
-                            <p>Preventive checks, family planning and specialised care for women.</p>
+                            <h2><a href="service-womens-health.html">Women's Health</a></h2>
+                            <p>Specialised care including preventive health checks, family planning, emotional wellbeing and pregnancy care.</p>
                         </div>
                     </div>
                     <!-- Service Item End -->
@@ -450,7 +478,7 @@
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->    
-                        <p>Guiding You from Struggle to Stability - <a href="services.html">View our all services.</a></p>
+                        <p>Comprehensive GP care under one roof - <a href="services.html">View all our services.</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -466,7 +494,7 @@
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Why Choose Us for Thoughtful Care</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our Values at Elmwood Medical Centre</h2>
                     </div>
                 </div>
             </div>
@@ -487,11 +515,11 @@
                             <div class="why-choose-card-icon">
                                 <img src="images/icon-why-choose-item-1-prime.svg" alt="">
                             </div>
-                            <h3>Personalized Care</h3>
-                            <p>We tailor our approach to your unique needs for better health outcomes.</p>
+                            <h3>Patient-Centred Care</h3>
+                            <p>Care that takes into account the psychosocial, spiritual and physical needs of each individual.</p>
                             <ul>
-                                <li>Family Friendly Care</li>
-                                <li>Bulk Billing Options</li>
+                                <li>Whole-Person Care</li>
+                                <li>Every Stage of Life</li>
                             </ul>
                         </div>
 
@@ -499,11 +527,11 @@
                             <div class="why-choose-card-icon">
                                 <img src="images/icon-why-choose-item-2-prime.svg" alt="">
                             </div>
-                            <h3>Experienced Doctors</h3>
-                            <p>Our GPs provide trusted, patient-centred care for every stage of life.</p>
+                            <h3>Best Practice</h3>
+                            <p>We strive for best practice standards and continuous improvement in all aspects of patient care.</p>
                             <ul>
-                                <li>Caring Approach</li>
-                                <li>Ongoing Support</li>
+                                <li>Continuous Improvement</li>
+                                <li>High Standards</li>
                             </ul>
                         </div>
 
@@ -511,11 +539,11 @@
                             <div class="why-choose-card-icon">
                                 <img src="images/icon-why-choose-item-3-prime.svg" alt="">
                             </div>
-                            <h3>Comprehensive Services</h3>
-                            <p>From skin checks to children's health — everything under one roof.</p>
+                            <h3>Confidentiality</h3>
+                            <p>We maintain professional standards of confidentiality for all information pertaining to patients.</p>
                             <ul>
-                                <li>Skin Cancer Clinic</li>
-                                <li>Allied Health</li>
+                                <li>Patient Privacy</li>
+                                <li>Professional Standards</li>
                             </ul>
                         </div>
 
@@ -523,11 +551,11 @@
                             <div class="why-choose-card-icon">
                                 <img src="images/icon-why-choose-us-item-1.svg" alt="">
                             </div>
-                            <h3>Local & Trusted</h3>
-                            <p>Proudly caring for the Albury Wodonga community since 2007.</p>
+                            <h3>Respect &amp; Teamwork</h3>
+                            <p>A culture of respect, support, education, teamwork and open communication with every patient.</p>
                             <ul>
-                                <li>Onsite Parking</li>
-                                <li>Weekend Hours</li>
+                                <li>Open Communication</li>
+                                <li>Education &amp; Support</li>
                             </ul>
                         </div>
                     </div>
@@ -601,7 +629,7 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-3" data-cursor="-opaque">A snapshot of our journey in numbers</h2>
-                                <p class="wow fadeInUp" data-wow-delay="0.2s">Behind every appointment is a story of trusted care. Here's a quick look at the milestones that reflect our commitment to Wodonga families.</p>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">Proudly providing quality medical care to Wodonga since 2007 — here's a quick look at the milestones that reflect our commitment to local families.</p>
                             </div>
                             <!-- Section Title End -->
 
@@ -621,14 +649,14 @@
                             <!-- Fun Fact Counter Item Start -->
                             <div class="fun-fact-counter-item-prime">
                                 <h2><span class="counter">18</span>+</h2>
-                                <p>Year of experience</p>
+                                <p>Years of Experience</p>
                             </div>
                             <!-- Fun Fact Counter Item End -->
 
                             <!-- Fun Fact Counter Item Start -->
                             <div class="fun-fact-counter-item-prime">
                                 <h2><span class="counter">5</span>k+</h2>
-                                <p>Therapy Sessions</p>
+                                <p>Consultations Delivered</p>
                             </div>
                             <!-- Fun Fact Counter Item End -->
 
@@ -659,7 +687,7 @@
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->
-                        <p>From Overwhelmed to Empowered - <a href="contact.html">Let's Begin Your Transformation.</a></p>
+                        <p>Ready to see a Wodonga GP? - <a href="contact.html">Book your appointment today.</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -668,6 +696,69 @@
     </div>
     <!-- Our Fun Facts Section End -->
 
+    <!-- Clinic Advantages Section Start -->
+    <div class="clinic-advantages">
+        <div class="container">
+            <div class="clinic-advantages-home-doctor wow fadeInUp">
+                <a class="clinic-advantages-logo" href="https://www.homedoctor.com.au/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/13sick-national-home-doctor.png" alt="13SICK National Home Doctor">
+                </a>
+                <p>If you or your family needs a doctor on a weeknight, weekend or public holiday for urgent medical care please use National Home Doctor service. Always call <a href="tel:000">000</a> in an emergency.</p>
+            </div>
+
+            <div class="section-title clinic-advantages-title">
+                <span class="section-sub-title wow fadeInUp">Why Elmwood</span>
+                <h2 class="text-anime-style-3" data-cursor="-opaque">The Advantages of our Wodonga Medical Centre</h2>
+            </div>
+
+            <div class="clinic-advantages-grid">
+                <div class="clinic-advantage-card wow fadeInUp">
+                    <div class="clinic-advantage-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Personalized Treatment</h3>
+                        <p>Fully individualized treatment.</p>
+                    </div>
+                </div>
+                <div class="clinic-advantage-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="clinic-advantage-icon clinic-advantage-icon-solid"><i class="fa-solid fa-check"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Allied Health</h3>
+                        <p>Allied Health services available.</p>
+                    </div>
+                </div>
+                <div class="clinic-advantage-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="clinic-advantage-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Experienced Doctors</h3>
+                        <p>Our doctors are committed to continued education.</p>
+                    </div>
+                </div>
+                <div class="clinic-advantage-card wow fadeInUp" data-wow-delay="0.05s">
+                    <div class="clinic-advantage-icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Onsite Parking</h3>
+                        <p>Lots of parking available for patients.</p>
+                    </div>
+                </div>
+                <div class="clinic-advantage-card wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="clinic-advantage-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Range of Services</h3>
+                        <p>All your needs under one roof.</p>
+                    </div>
+                </div>
+                <div class="clinic-advantage-card wow fadeInUp" data-wow-delay="0.25s">
+                    <div class="clinic-advantage-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="clinic-advantage-content">
+                        <h3>Technology</h3>
+                        <p>Our practice uses state-of-the-art technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Clinic Advantages Section End -->
+
     <!-- Meet Our Doctors Section Start -->
     <div class="meet-doctors">
         <div class="container">
@@ -675,23 +766,24 @@
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Our Team</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Meet our Doctors, You're in Good Hands</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Meet our Doctors, You're in
+Good Hands</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-md-6">
+            <div class="row doctors-grid" data-visible="4" data-step="4">
+                <div class="col-xl-3 col-md-6 doctor-col is-visible">
                     <div class="doctor-card wow fadeInUp">
                         <div class="doctor-card-image">
-                            <a href="team-single.html">
-                                <img src="images/team-1.jpg" alt="Dr Neetu Grover">
+                            <a href="doctor-neetu-grover.html">
+                                <img src="images/doctors/neetu-grover.jpg" alt="Dr Neetu Grover">
                             </a>
                         </div>
                         <div class="doctor-card-body">
                             <div class="doctor-card-info">
-                                <h3><a href="team-single.html">Dr Neetu Grover</a></h3>
-                                <p>FRACGP, Skin Cancer</p>
+                                <h3><a href="doctor-neetu-grover.html">Dr Neetu Grover</a></h3>
+                                <p>Adv DRANZCOG, Skin Cancer</p>
                             </div>
                             <div class="doctor-card-share">
                                 <div class="doctor-socials">
@@ -705,16 +797,16 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6 doctor-col is-visible">
                     <div class="doctor-card wow fadeInUp" data-wow-delay="0.15s">
                         <div class="doctor-card-image">
-                            <a href="team-single.html">
-                                <img src="images/team-2.jpg" alt="Dr Ayesha">
+                            <a href="doctor-ayesha.html">
+                                <img src="images/doctors/ayesha.jpg" alt="Dr Ayesha">
                             </a>
                         </div>
                         <div class="doctor-card-body">
                             <div class="doctor-card-info">
-                                <h3><a href="team-single.html">Dr Ayesha</a></h3>
+                                <h3><a href="doctor-ayesha.html">Dr Ayesha</a></h3>
                                 <p>General Practitioner</p>
                             </div>
                             <div class="doctor-card-share">
@@ -729,16 +821,16 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6 doctor-col is-visible">
                     <div class="doctor-card wow fadeInUp" data-wow-delay="0.3s">
                         <div class="doctor-card-image">
-                            <a href="team-single.html">
-                                <img src="images/team-3.jpg" alt="Dr Joseph">
+                            <a href="doctor-joseph.html">
+                                <img src="images/doctors/joseph.jpg" alt="Dr Joseph">
                             </a>
                         </div>
                         <div class="doctor-card-body">
                             <div class="doctor-card-info">
-                                <h3><a href="team-single.html">Dr Joseph</a></h3>
+                                <h3><a href="doctor-joseph.html">Dr Joseph</a></h3>
                                 <p>General Practitioner</p>
                             </div>
                             <div class="doctor-card-share">
@@ -753,16 +845,16 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6 doctor-col is-visible">
                     <div class="doctor-card wow fadeInUp" data-wow-delay="0.45s">
                         <div class="doctor-card-image">
-                            <a href="team-single.html">
-                                <img src="images/team-4.jpg" alt="Dr Sinto Kunjachan">
+                            <a href="doctor-sinto-kunjachan.html">
+                                <img src="images/doctors/sinto-kunjachan.jpg" alt="Dr Sinto Kunjachan">
                             </a>
                         </div>
                         <div class="doctor-card-body">
                             <div class="doctor-card-info">
-                                <h3><a href="team-single.html">Dr Sinto Kunjachan</a></h3>
+                                <h3><a href="doctor-sinto-kunjachan.html">Dr Sinto Kunjachan</a></h3>
                                 <p>General Practitioner</p>
                             </div>
                             <div class="doctor-card-share">
@@ -776,6 +868,157 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp">
+                        <div class="doctor-card-image">
+                            <a href="doctor-bhavin-purohit.html">
+                                <img src="images/doctors/bhavin-purohit.jpg" alt="Dr Bhavin Purohit">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-bhavin-purohit.html">Dr Bhavin Purohit</a></h3>
+                                <p>General Practitioner</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="doctor-card-image">
+                            <a href="doctor-lyza-cara.html">
+                                <img src="images/doctors/lyza-cara.jpg" alt="Dr Lyza Cara">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-lyza-cara.html">Dr Lyza Cara</a></h3>
+                                <p>General Practitioner</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="doctor-card-image">
+                            <a href="doctor-iby-ann-xavier.html">
+                                <img src="images/doctors/iby-ann-xavier.jpg" alt="Dr Iby Ann Xavier">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-iby-ann-xavier.html">Dr Iby Ann Xavier</a></h3>
+                                <p>General Practitioner</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp" data-wow-delay="0.45s">
+                        <div class="doctor-card-image">
+                            <a href="doctor-sonam-topgyal.html">
+                                <img src="images/doctors/sonam-topgyal.jpg" alt="Dr Sonam Topgyal">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-sonam-topgyal.html">Dr Sonam Topgyal</a></h3>
+                                <p>General Practitioner</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp">
+                        <div class="doctor-card-image">
+                            <a href="doctor-warren.html">
+                                <img src="images/doctors/warren.jpg" alt="Dr Warren">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-warren.html">Dr Warren</a></h3>
+                                <p>General Practitioner</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 doctor-col">
+                    <div class="doctor-card wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="doctor-card-image">
+                            <a href="doctor-margi-patel.html">
+                                <img src="images/doctors/margi-patel.jpg" alt="Margi Patel">
+                            </a>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="doctor-card-info">
+                                <h3><a href="doctor-margi-patel.html">Margi Patel</a></h3>
+                                <p>Registered Dietitian</p>
+                            </div>
+                            <div class="doctor-card-share">
+                                <div class="doctor-socials">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                                <span class="doctor-share-btn" aria-hidden="true"><i class="fa-solid fa-share"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctors-more-wrap wow fadeInUp" data-wow-delay="0.2s">
+                <button type="button" class="doctors-show-more" aria-expanded="false">
+                    <span class="doctors-show-more-text">Show More Doctors</span>
+                    <span class="doctors-show-more-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                </button>
             </div>
         </div>
     </div>
@@ -788,7 +1031,7 @@
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">How It Works</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Clear process for meaningful lasting care</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Clear process for trusted GP care</h2>
                     </div>
                 </div>
             </div>
@@ -851,7 +1094,7 @@
                                 <img src="images/icon-phone-white.svg" alt="">
                             </div>
                         </div>
-                        <p>Where Healing Begins and Confidence Grows - <a href="testimonials.html">Read Their Experiences.</a></p>
+                        <p>Proudly caring for Wodonga since 2007 - <a href="testimonials.html">Read patient experiences.</a></p>
                     </div>
                 </div>
             </div>
@@ -869,7 +1112,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <span class="section-sub-title wow fadeInUp">Frequently Asked Questions</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Helpful guidance for new therapy clients</h2>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Helpful guidance for new patients</h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -891,12 +1134,12 @@
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="heading1">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    Q1. Is counselling confidential?
+                                    Q1. Are consultations confidential?
                                 </button>
                             </h2>
                             <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>A standard individual session typically lasts 60 minutes. Couples sessions may extend to 75 minutes depending on the needs</p>
+                                    <p>Yes. We maintain professional standards of confidentiality for all patient information at Elmwood Medical Centre.</p>
                                 </div>
                             </div>
                         </div>
@@ -906,12 +1149,12 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                             <h2 class="accordion-header" id="heading2">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse1">
-                                    Q2. How long does a therapy session last?
+                                    Q2. Do you offer bulk billing?
                                 </button>
                             </h2>
                             <div id="collapse2" class="accordion-collapse collapse show" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>A standard individual session typically lasts 60 minutes. Couples sessions may extend to 75 minutes depending on the needs</p>
+                                    <p>Elmwood is a mixed-billed clinic. Bulk-billed appointments are available with selected doctors and are shown clearly when booking through HotDoc. Adults 70+ are bulk billed for standard consultations (excludes skin checks &amp; procedures).</p>
                                 </div>
                             </div>
                         </div>
@@ -921,12 +1164,12 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                             <h2 class="accordion-header" id="heading3">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse1">
-                                    Q3. How many sessions will I need?
+                                    Q3. What are your opening hours?
                                 </button>
                             </h2>
                             <div id="collapse3" class="accordion-collapse collapse" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>A standard individual session typically lasts 60 minutes. Couples sessions may extend to 75 minutes depending on the needs</p>
+                                    <p>Monday to Friday 8:00 am – 6:00 pm, Saturday and Sunday 9:00 am – 4:00 pm. Call (02) 6056 2011 for appointments.</p>
                                 </div>
                             </div>
                         </div>
@@ -936,12 +1179,12 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                             <h2 class="accordion-header" id="heading4">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse1">
-                                    Q4. Do you offer online counselling?
+                                    Q4. Do you offer phone consults?
                                 </button>
                             </h2>
                             <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>A standard individual session typically lasts 60 minutes. Couples sessions may extend to 75 minutes depending on the needs</p>
+                                    <p>Yes. You can book online or request a phone consult. Visit reception or call (02) 6056 2011 for help choosing the right appointment type.</p>
                                 </div>
                             </div>
                         </div>
@@ -951,12 +1194,12 @@
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                             <h2 class="accordion-header" id="heading5">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse1">
-                                    Q5. What issues can therapy help with?
+                                    Q5. Where are you located?
                                 </button>
                             </h2>
                             <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>A standard individual session typically lasts 60 minutes. Couples sessions may extend to 75 minutes depending on the needs</p>
+                                    <p>Elmwood Medical Centre is at 7 McFarland Rd, Wodonga VIC — with onsite parking and allied health services available.</p>
                                 </div>
                             </div>
                         </div>
@@ -977,7 +1220,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title section-title-center">
                         <span class="section-sub-title wow fadeInUp">Our Testimonial</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Professional therapy plans that fit your budget</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Trusted care from Wodonga patients &amp; families</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>                
@@ -1003,7 +1246,7 @@
                                                 <span>(4.9)</span>
                                             </div>
                                             <div class="testimonial-item-content-prime">
-                                                <p>“I was struggling with anxiety for years, and starting therapy here was the best decision I made. The therapist made. "</p>
+                                                <p>“We’ve been coming to Elmwood for years. The doctors and nurses always take the time to listen and explain everything clearly.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author-prime">
@@ -1014,7 +1257,7 @@
                                             </div>
                                             <div class="testimonial-author-content-prime">
                                                 <h2>Sarah M.</h2>
-                                                <p>Individual Therapy Client</p>
+                                                <p>Wodonga Family Patient</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1036,7 +1279,7 @@
                                                 <span>(4.9)</span>
                                             </div>
                                             <div class="testimonial-item-content-prime">
-                                                <p>“I was struggling with anxiety for years, and starting therapy here was the best decision I made. The therapist made. "</p>
+                                                <p>“Booking online was easy and my GP was thorough. Great to have parking and pathology onsite as well.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author-prime">
@@ -1047,7 +1290,7 @@
                                             </div>
                                             <div class="testimonial-author-content-prime">
                                                 <h2>James R.</h2>
-                                                <p>Individual Therapy Client</p>
+                                                <p>Wodonga Patient</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1069,7 +1312,7 @@
                                                 <span>(4.9)</span>
                                             </div>
                                             <div class="testimonial-item-content-prime">
-                                                <p>“I was struggling with anxiety for years, and starting therapy here was the best decision I made. The therapist made. "</p>
+                                                <p>“The skin cancer clinic put my mind at ease. Professional care in a welcoming local medical centre.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author-prime">
@@ -1080,7 +1323,7 @@
                                             </div>
                                             <div class="testimonial-author-content-prime">
                                                 <h2>Emily T.</h2>
-                                                <p>Individual Therapy Client</p>
+                                                <p>Skin Check Patient</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1102,7 +1345,7 @@
                                                 <span>(4.9)</span>
                                             </div>
                                             <div class="testimonial-item-content-prime">
-                                                <p>“I was struggling with anxiety for years, and starting therapy here was the best decision I made. The therapist made. "</p>
+                                                <p>“As a new patient I felt supported from reception through to my appointment. Truly family-friendly GP care.”</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-item-author-prime">
@@ -1113,7 +1356,7 @@
                                             </div>
                                             <div class="testimonial-author-content-prime">
                                                 <h2>Priya M.</h2>
-                                                <p>Individual Therapy Client</p>
+                                                <p>New Patient</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1141,7 +1384,7 @@
                             </div>
                         </div>
                         <!-- Satisfy Client Images End -->    
-                        <p>Where Healing Begins and Confidence Grows -<a href="testimonials.html">Read Their Reviews.</a></p>
+                        <p>Proudly caring for Wodonga since 2007 - <a href="testimonials.html">Read Their Reviews.</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
@@ -1158,7 +1401,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <span class="section-sub-title wow fadeInUp">Latest Blogs</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Practical advice, research & real life strategies</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Latest news and health articles</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1168,7 +1411,7 @@
                     <div class="section-content-btn">
                         <!-- Section Title Content Start -->
                         <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                            <p>Explore evidence-based insights, therapist-approved techniques, and practical tools designed to help you navigate stress</p>
+                            <p>Find out the latest news about Elmwood Medical Centre and practical health guidance for Wodonga families.</p>
                         </div>
                         <!-- Section Title Content End -->
     
@@ -1200,7 +1443,7 @@
                                 </ul>
                             </div>
                             <div class="post-item-content">
-                                <h2><a href="blog-single.html">How Therapy Helps: What to Expect in Your First Session</a></h2>
+                                <h2><a href="blog-single.html">Skin Cancer Checks: Why Early Detection Matters</a></h2>
                             </div>
                             <div class="post-item-btn">
                                 <a href="blog-single.html" class="readmore-btn">Read More</a>
@@ -1229,7 +1472,7 @@
                                     </ul>
                                 </div>
                                 <div class="post-item-content">
-                                    <h2><a href="blog-single.html">Improving Communication in Your Relationship</a></h2>
+                                    <h2><a href="blog-single.html">Children’s Health: Early Intervention for Better Outcomes</a></h2>
                                 </div>
                                 <div class="post-item-btn">
                                     <a href="blog-single.html" class="readmore-btn">Read More</a>
@@ -1254,7 +1497,7 @@
                                     </ul>
                                 </div>
                                 <div class="post-item-content">
-                                    <h2><a href="blog-single.html">Protecting Your Mental Health in a Connected World</a></h2>
+                                    <h2><a href="blog-single.html">Preventative Health: Staying Well for the Future</a></h2>
                                 </div>
                                 <div class="post-item-btn">
                                     <a href="blog-single.html" class="readmore-btn">Read More</a>
@@ -1270,79 +1513,132 @@
     </div>
     <!-- Our Blog Section End -->
 
+    <!-- Location Map Section Start -->
+    <div class="elmwood-map-section">
+        <div class="container">
+            <div class="elmwood-map-shell wow fadeInUp">
+                <div class="elmwood-map-frame">
+                    <iframe
+                        title="Elmwood Medical Centre location map"
+                        src="https://maps.google.com/maps?q=291%20Beechworth%20Rd%20Wodonga%20VIC%203690%20Australia&ll=-36.136061,146.885455&z=14&hl=en&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="elmwood-map-card wow fadeInUp" data-wow-delay="0.15s">
+                    <span class="elmwood-map-badge">Find Us</span>
+                    <h2>Visit Elmwood Medical Centre</h2>
+                    <p>7 McFarland Rd, Wodonga VIC</p>
+                    <ul class="elmwood-map-meta">
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:+61260562011">(02) 6056 2011</a></li>
+                        <li><i class="fa-solid fa-clock"></i><span>Mon – Fri: 8.00 am – 6.00 pm</span></li>
+                    </ul>
+                    <a class="elmwood-map-btn" href="https://www.google.com/maps?ll=-36.136061,146.885455&z=12&t=m&hl=en&gl=US&mapclient=embed&q=291+Beechworth+Rd+Wodonga+VIC+3690+Australia" target="_blank" rel="noopener noreferrer">
+                        Get Directions
+                        <span><i class="fa-solid fa-arrow-up"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Location Map Section End -->
+
     <!-- Main Footer Start -->
     <footer class="footer-elmwood">
         <div class="container">
             <div class="footer-panel wow fadeInUp">
+                <div class="footer-contact-bar">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <div>
+                            <strong>Visit our Location</strong>
+                            <p><a href="https://www.google.com/maps?ll=-36.136061,146.885455&amp;z=12&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=291+Beechworth+Rd+Wodonga+VIC+3690+Australia" target="_blank" rel="noopener noreferrer">7 McFarland Rd, Wodonga VIC</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon"><i class="fa-solid fa-phone"></i></span>
+                        <div>
+                            <strong>Give us a Call</strong>
+                            <p><a href="tel:+61260562011">(02) 6056 2011</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon"><i class="fa-solid fa-fax"></i></span>
+                        <div>
+                            <strong>Fax Number</strong>
+                            <p><a href="tel:+61260563011">(02) 6056 3011</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <div>
+                            <strong>Send us a Message</strong>
+                            <p><a href="mailto:admin@elmwoodmedical.com.au">admin@elmwoodmedical.com.au</a></p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="footer-panel-grid">
-                    <!-- Brand -->
                     <div class="footer-col footer-col-brand">
                         <a class="navbar-brand footer-brand" href="./">
                             <span class="brand-mark"><img src="images/logo-mark.png" alt=""></span>
                             <span class="brand-text"><span class="brand-text-shine">Elmwood.</span></span>
                         </a>
-                        <p class="footer-brand-text">Trusted GP care for Wodonga families since 2007 — patient-centred healthcare under one roof.</p>
+                        <h3>About Us</h3>
+                        <p class="footer-brand-text">Elmwood Medical Centre opened its doors in 2007 and we are proud to be a local Doctor owned General Practice which offers a comprehensive range of medical services to everyone in the community. We are committed to supporting healthy outcomes for our patients.</p>
                         <a href="book-appointment.html" class="footer-cta-btn">
                             Book Online
                             <span class="footer-cta-arrow"><i class="fa-solid fa-arrow-up"></i></span>
                         </a>
                     </div>
 
-                    <!-- Company -->
                     <div class="footer-col">
-                        <h3>Company</h3>
+                        <h3>Extra Navigation</h3>
                         <ul>
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="team.html">Our Doctors</a></li>
-                            <li><a href="faqs.html">FAQs</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faqs.html">Frequently Asked Questions</a></li>
+                            <li><a href="contact.html">Careers</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
 
-                    <!-- Services -->
                     <div class="footer-col">
-                        <h3>Services</h3>
+                        <h3>Our Services</h3>
                         <ul>
-                            <li><a href="services.html">General Practice</a></li>
-                            <li><a href="services.html">Skin Cancer Clinic</a></li>
-                            <li><a href="services.html">Women's Health</a></li>
-                            <li><a href="services.html">Children's Health</a></li>
-                            <li><a href="services.html">Mental Health</a></li>
+                            <li><a href="services.html">View all Services</a></li>
+                            <li><a href="service-mental-health.html">Mental Health</a></li>
+                            <li><a href="service-childrens-health.html">Children's Health</a></li>
+                            <li><a href="service-womens-health.html">Women's Health</a></li>
+                            <li><a href="service-mens-health.html">Men's Health</a></li>
+                            <li><a href="service-veteran-affairs.html">Veteran Affairs</a></li>
+                            <li><a href="service-preventative-health.html">Preventative Health</a></li>
+                            <li><a href="service-vaccinations.html">Vaccinations</a></li>
                         </ul>
                     </div>
 
-                    <!-- Contact -->
-                    <div class="footer-col footer-col-contact">
-                        <h3>Address</h3>
-                        <p>7 McFarland Rd,<br>Wodonga VIC</p>
-                        <h3>Phone</h3>
-                        <p>
-                            <a href="tel:+61260562011">(02) 6056 2011</a><br>
-                            <a href="mailto:admin@elmwoodmedical.com.au">admin@elmwoodmedical.com.au</a>
-                        </p>
-                        <div class="footer-socials">
-                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
+                    <div class="footer-col footer-col-hours">
+                        <h3>Opening Hours</h3>
+                        <ul class="footer-hours-list">
+                            <li><span>Monday</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Tuesday</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Wednesday</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Thursday</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Friday</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Saturday</span><strong>09:00 – 16:00</strong></li>
+                            <li><span>Sunday</span><strong>09:00 – 16:00</strong></li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="footer-hours-row">
-                    <span>Mon – Fri: 8.00 am – 6.00 pm</span>
-                    <span>Saturday: 9.00 am – 4.00 pm</span>
-                    <span>Sunday: 9.00 am – 4.00 pm</span>
                 </div>
             </div>
 
             <div class="footer-bottom-bar wow fadeInUp" data-wow-delay="0.15s">
-                <p>© Copyright 2026 Elmwood Medical Centre</p>
+                <p>Copyright 2026 Elmwood Medical Centre</p>
                 <ul>
-                    <li><a href="#">Terms &amp; Condition</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="https://practiceboost.com.au/" target="_blank" rel="noopener noreferrer">Website &amp; Marketing by Practice Boost</a></li>
                 </ul>
                 <a href="#" class="footer-back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
             </div>
