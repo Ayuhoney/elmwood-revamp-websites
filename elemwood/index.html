@@ -82,9 +82,15 @@
                             </ul>
                         </div>
                         
-                        <!-- Header Btn Start -->
+                        <!-- Header Btn Start — toggles Book Online / Book Skin Check -->
                         <div class="header-btn">
-                            <a href="book-appointment.html" class="btn-default">Book Online</a>
+                            <a href="book-appointment.html" class="btn-default book-cta-toggle"
+                               data-label-online="Book Online"
+                               data-label-skin="Book Skin Check"
+                               data-href-online="book-appointment.html"
+                               data-href-skin="https://elmwoodmedical.com.au/services/skin-cancer-clinic/">
+                                <span class="book-cta-text">Book Online</span>
+                            </a>
                         </div>
                         <!-- Header Btn End -->
                     </div>
@@ -99,26 +105,32 @@
 
     <!-- Hero Section Start -->
     <div class="hero-prime dark-section">
-        <!-- Hero Image Carousel Start -->
+        <!-- Hero Image Carousel Start — building/superclinic first -->
         <div class="hero-bg-carousel">
             <div class="swiper hero-carousel-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="hero-slide-image">
                             <img class="hero-slide-blur" src="images/hero-carousel/hero-01-clinic-exterior.png" alt="" aria-hidden="true">
-                            <img class="hero-slide-main" src="images/hero-carousel/hero-01-clinic-exterior.png" alt="Elmwood Medical Centre exterior">
+                            <img class="hero-slide-main" src="images/hero-carousel/hero-01-clinic-exterior.png" alt="Elmwood Medical Centre Superclinic building">
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="hero-slide-image">
-                            <img class="hero-slide-blur" src="images/hero-carousel/hero-02-medical-care.png" alt="" aria-hidden="true">
-                            <img class="hero-slide-main" src="images/hero-carousel/hero-02-medical-care.png" alt="Quality medical care at Elmwood">
+                        <div class="hero-slide-image hero-slide-image--focus-right">
+                            <img class="hero-slide-blur" src="images/hero-carousel/hero-07-australia-service.png" alt="" aria-hidden="true">
+                            <img class="hero-slide-main" src="images/hero-carousel/hero-07-australia-service.png" alt="Australian service and community pride">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="hero-slide-image">
                             <img class="hero-slide-blur" src="images/hero-carousel/hero-03-family-sofa.png" alt="" aria-hidden="true">
                             <img class="hero-slide-main" src="images/hero-carousel/hero-03-family-sofa.png" alt="Family care at Elmwood Medical Centre">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide-image">
+                            <img class="hero-slide-blur" src="images/hero-carousel/hero-06-skin-clinic.png" alt="" aria-hidden="true">
+                            <img class="hero-slide-main" src="images/hero-carousel/hero-06-skin-clinic.png" alt="Skin clinic and dermatology care">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -135,14 +147,8 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="hero-slide-image">
-                            <img class="hero-slide-blur" src="images/hero-carousel/hero-06-skin-clinic.png" alt="" aria-hidden="true">
-                            <img class="hero-slide-main" src="images/hero-carousel/hero-06-skin-clinic.png" alt="Skin clinic and dermatology care">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero-slide-image hero-slide-image--focus-right">
-                            <img class="hero-slide-blur" src="images/hero-carousel/hero-07-australia-service.png" alt="" aria-hidden="true">
-                            <img class="hero-slide-main" src="images/hero-carousel/hero-07-australia-service.png" alt="Australian service and community pride">
+                            <img class="hero-slide-blur" src="images/hero-carousel/hero-02-medical-care.png" alt="" aria-hidden="true">
+                            <img class="hero-slide-main" src="images/hero-carousel/hero-02-medical-care.png" alt="Quality medical care at Elmwood">
                         </div>
                     </div>
                 </div>
@@ -160,6 +166,34 @@
             </svg>
         </button>
         <!-- Hero Image Carousel End -->
+
+        <!-- Side service chips — light green glass + custom icons -->
+        <aside class="hero-side-ribbons" aria-label="Featured Elmwood services">
+            <a class="side-ribbon side-ribbon--mint" href="book-appointment.html">
+                <span class="side-ribbon-icon"><img src="images/side-chips/iron-infusion.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Iron Infusion</span>
+            </a>
+            <a class="side-ribbon side-ribbon--sky" href="book-appointment.html">
+                <span class="side-ribbon-icon"><img src="images/side-chips/commercial-truck.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Commercial Licence Medicals</span>
+            </a>
+            <a class="side-ribbon side-ribbon--rose" href="book-appointment.html">
+                <span class="side-ribbon-icon"><img src="images/side-chips/mirena.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Mirena / Implanon</span>
+            </a>
+            <a class="side-ribbon side-ribbon--gold" href="https://elmwoodmedical.com.au/services/skin-cancer-clinic/" target="_blank" rel="noopener noreferrer">
+                <span class="side-ribbon-icon"><img src="images/side-chips/skin-check.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Skin Check</span>
+            </a>
+            <a class="side-ribbon side-ribbon--violet" href="https://elmwoodmedical.com.au/services/skin-cancer-clinic/" target="_blank" rel="noopener noreferrer">
+                <span class="side-ribbon-icon"><img src="images/side-chips/skin-procedure.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Skin Procedures</span>
+            </a>
+            <a class="side-ribbon side-ribbon--teal" href="https://completeveteranhealth.com.au/" target="_blank" rel="noopener noreferrer">
+                <span class="side-ribbon-icon"><img src="images/side-chips/defence.svg" alt="" width="22" height="22"></span>
+                <span class="side-ribbon-title">Defence Medicals</span>
+            </a>
+        </aside>
         
         <div class="container">
             <div class="row align-items-center">
@@ -168,6 +202,7 @@
                     <div class="hero-content-prime">
                         <!-- Section Title Start -->
                         <div class="section-title">
+                            <span class="hero-superclinic-tag wow fadeInUp">Wodonga Superclinic</span>
                             <span class="section-sub-title wow fadeInUp">Wodonga Family Doctors Since 2007</span>
                             <h1 data-cursor="-opaque">Your Wodonga Family <span class="text-shimmer">Doctors</span></h1>
                         </div>

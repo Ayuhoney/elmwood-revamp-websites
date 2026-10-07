@@ -521,5 +521,37 @@
 	}
 	/* Service Item List End */
 
+	/* Book Online / Book Skin Check toggle */
+	(function initBookCtaToggle(){
+		var $cta = $('.book-cta-toggle');
+		if(!$cta.length){ return; }
+
+		var mode = 'online';
+		var timer;
+
+		function applyMode(next){
+			mode = next;
+			$cta.addClass('is-swapping');
+			window.setTimeout(function(){
+				var label = mode === 'skin' ? $cta.data('label-skin') : $cta.data('label-online');
+				var href = mode === 'skin' ? $cta.data('href-skin') : $cta.data('href-online');
+				$cta.attr({'href': href, 'data-mode': mode});
+				$cta.find('.book-cta-text').text(label);
+				$cta.removeClass('is-swapping');
+			}, 180);
+		}
+
+		function startRotate(){
+			window.clearInterval(timer);
+			timer = window.setInterval(function(){
+				applyMode(mode === 'online' ? 'skin' : 'online');
+			}, 3800);
+		}
+
+		$cta.on('mouseenter focusin', function(){ window.clearInterval(timer); });
+		$cta.on('mouseleave focusout', startRotate);
+		startRotate();
+	})();
+
 	
 })(jQuery);
