@@ -16298,3 +16298,927 @@ body.elmwood-hotdoc-open{
 		font-size: 12px;
 	}
 }
+
+/* ===== Elmwood Fees Schedule (Jan 2026) ===== */
+
+.elmwood-fees-page{
+	position: relative;
+	/* overflow must stay visible so sidebar sticky works while scrolling */
+	overflow: visible;
+	padding: 72px 0 90px;
+	background:
+		radial-gradient(circle at 12% 18%, rgba(233, 255, 244, 0.95) 0%, transparent 36%),
+		radial-gradient(circle at 88% 70%, rgba(4, 59, 53, 0.05) 0%, transparent 38%),
+		#F4F8F6;
+}
+
+/* Floating leaves */
+.elmwood-fees-leaves{
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.elmwood-fees-leaf{
+	position: absolute;
+	width: 28px;
+	height: 40px;
+	background:
+		radial-gradient(ellipse at 30% 30%, #8FE3B8 0%, #2BB673 45%, #0A5C52 100%);
+	border-radius: 2% 80% 20% 80%;
+	opacity: 0.22;
+	filter: blur(0.2px);
+	animation: elmwoodFeesLeafFloat 14s ease-in-out infinite;
+}
+
+.elmwood-fees-leaf::before{
+	content: '';
+	position: absolute;
+	left: 48%;
+	top: 8%;
+	bottom: 8%;
+	width: 1.5px;
+	background: rgba(255, 255, 255, 0.45);
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.elmwood-fees-leaf-1{ top: 8%; left: 6%; animation-duration: 16s; }
+.elmwood-fees-leaf-2{ top: 22%; right: 8%; width: 22px; height: 32px; animation-duration: 18s; animation-delay: -3s; opacity: 0.18; }
+.elmwood-fees-leaf-3{ top: 48%; left: 3%; width: 20px; height: 30px; animation-duration: 15s; animation-delay: -6s; opacity: 0.16; }
+.elmwood-fees-leaf-4{ top: 62%; right: 4%; width: 26px; height: 36px; animation-duration: 17s; animation-delay: -2s; }
+.elmwood-fees-leaf-5{ top: 78%; left: 12%; width: 18px; height: 26px; animation-duration: 19s; animation-delay: -8s; opacity: 0.14; }
+.elmwood-fees-leaf-6{ top: 34%; left: 48%; width: 16px; height: 24px; animation-duration: 20s; animation-delay: -5s; opacity: 0.12; }
+
+@keyframes elmwoodFeesLeafFloat{
+	0%, 100%{
+		transform: translate3d(0, 0, 0) rotate(-12deg);
+	}
+	25%{
+		transform: translate3d(12px, -18px, 0) rotate(8deg);
+	}
+	50%{
+		transform: translate3d(-10px, -34px, 0) rotate(-18deg);
+	}
+	75%{
+		transform: translate3d(16px, -14px, 0) rotate(14deg);
+	}
+}
+
+.elmwood-fees-page > .container{
+	position: relative;
+	z-index: 1;
+}
+
+/* Centered intro */
+.elmwood-fees-intro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 28px;
+	margin-bottom: 42px;
+}
+
+.elmwood-fees-intro-copy{
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.elmwood-fees-intro .section-title{
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.elmwood-fees-intro .section-title .section-sub-title{
+	display: inline-flex;
+}
+
+.elmwood-fees-intro .section-title h2{
+	font-size: clamp(26px, 3.1vw, 40px);
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.25;
+	white-space: nowrap;
+}
+
+.elmwood-fees-heading-inline{
+	white-space: nowrap;
+}
+
+@media only screen and (max-width: 991px){
+	.elmwood-fees-intro .section-title h2{
+		white-space: normal;
+	}
+
+	.elmwood-fees-heading-inline{
+		display: inline;
+		white-space: nowrap;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.elmwood-fees-heading-inline{
+		white-space: normal;
+	}
+}
+
+.elmwood-fees-intro .section-title p{
+	max-width: 58ch;
+	margin: 14px auto 0;
+	line-height: 1.65;
+	color: #5B736A;
+}
+
+/* Green shimmer for Mixed billing */
+.elmwood-fees-shimmer{
+	display: inline-block;
+	background-image: linear-gradient(
+		105deg,
+		#043B35 0%,
+		#0A5C52 28%,
+		#2BB673 46%,
+		#E9FFF4 50%,
+		#2BB673 54%,
+		#0A5C52 72%,
+		#043B35 100%
+	);
+	background-size: 240% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	animation: elmwoodFeesShimmer 2.6s linear infinite;
+}
+
+.elmwood-fees-shimmer-light{
+	display: inline-block;
+	background-image: linear-gradient(
+		105deg,
+		#FFFFFF 0%,
+		#C9F5DE 35%,
+		#FFFFFF 50%,
+		#C9F5DE 65%,
+		#FFFFFF 100%
+	);
+	background-size: 220% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	animation: elmwoodFeesShimmer 2.4s linear infinite;
+}
+
+@keyframes elmwoodFeesShimmer{
+	0%{ background-position: 100% center; }
+	100%{ background-position: -100% center; }
+}
+
+/* Inclined Mixed Billing band */
+.elmwood-fees-incline{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+	gap: 14px;
+	width: 100%;
+}
+
+.elmwood-fees-incline-band{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 72px;
+	padding: 14px 36px 14px 40px;
+	color: #fff;
+	background: linear-gradient(135deg, var(--primary-color) 0%, #0A5C52 55%, #147A68 100%);
+	clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+	box-shadow: 0 16px 34px rgba(4, 59, 53, 0.2);
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.elmwood-fees-incline-shine{
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		110deg,
+		transparent 0%,
+		transparent 40%,
+		rgba(255, 255, 255, 0.22) 50%,
+		transparent 60%,
+		transparent 100%
+	);
+	background-size: 220% 100%;
+	animation: elmwoodFeesBandShine 3.2s ease-in-out infinite;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.elmwood-fees-incline-copy{
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	text-align: center;
+}
+
+.elmwood-fees-incline-title{
+	display: block;
+	font-family: var(--accent-font);
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.elmwood-fees-incline-meta{
+	display: block;
+	font-size: 12px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.35;
+	letter-spacing: 0.01em;
+	color: rgba(255, 255, 255, 0.9);
+	white-space: nowrap;
+}
+
+@keyframes elmwoodFeesBandShine{
+	0%{ background-position: 120% center; }
+	100%{ background-position: -40% center; }
+}
+
+.elmwood-fees-badge{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 2px;
+	min-width: 132px;
+	padding: 14px 16px;
+	border-radius: 16px;
+	background: linear-gradient(145deg, var(--primary-color) 0%, #0A5C52 100%);
+	color: #fff;
+	box-shadow: 0 12px 26px rgba(4, 59, 53, 0.18);
+	text-align: left;
+	flex-shrink: 0;
+}
+
+.elmwood-fees-badge-kicker{
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.elmwood-fees-badge strong{
+	font-family: var(--accent-font);
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.25;
+	color: #fff;
+}
+
+.elmwood-fees-badge-date{
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.88);
+}
+
+.elmwood-fees-layout{
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: 28px;
+	align-items: start;
+}
+
+.elmwood-fees-block + .elmwood-fees-block{
+	margin-top: 38px;
+}
+
+.elmwood-fees-section-head{
+	margin: 0 0 18px;
+}
+
+.elmwood-fees-section-head.is-center{
+	text-align: center;
+}
+
+.elmwood-fees-section-head.is-center p{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.elmwood-fees-section-head h3{
+	font-family: var(--accent-font);
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--primary-color);
+	letter-spacing: -0.02em;
+	margin-bottom: 6px;
+}
+
+.elmwood-fees-section-head p{
+	margin: 0;
+	max-width: 48ch;
+	font-size: 15px;
+	line-height: 1.55;
+	color: #5B736A;
+}
+
+.elmwood-fees-conditions{
+	max-width: none;
+	width: 100%;
+}
+
+.elmwood-fees-conditions .elmwood-fees-accordion{
+	text-align: left;
+	width: 100%;
+}
+
+/* Full schedule cards (PDF 3-column mapping) */
+.elmwood-fees-schedule{
+	display: grid;
+	gap: 12px;
+}
+
+.elmwood-fees-sched{
+	padding: 14px 16px 16px;
+	border-radius: 18px;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.07);
+	box-shadow: 0 8px 20px rgba(4, 59, 53, 0.04);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.elmwood-fees-sched:hover{
+	transform: translateY(-2px);
+	border-color: rgba(4, 59, 53, 0.14);
+	box-shadow: 0 14px 30px rgba(4, 59, 53, 0.08);
+}
+
+.elmwood-fees-sched-head{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.elmwood-fees-sched-head strong{
+	display: block;
+	font-family: var(--accent-font);
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--primary-color);
+	line-height: 1.3;
+}
+
+.elmwood-fees-sched-head em{
+	display: block;
+	font-style: normal;
+	font-size: 12px;
+	color: #6B8278;
+	margin-top: 2px;
+}
+
+.elmwood-fees-elig-mark{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: var(--accent-color);
+	color: var(--primary-color);
+	font-family: var(--accent-font);
+	font-size: 14px;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.elmwood-fees-mark{
+	font-size: 0.7em;
+	vertical-align: super;
+	margin-left: 2px;
+}
+
+.elmwood-fees-sched-cols{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 8px;
+}
+
+.elmwood-fees-sched-col{
+	display: grid;
+	gap: 3px;
+	align-content: start;
+	padding: 10px 11px;
+	border-radius: 12px;
+	background: #F7FAF8;
+	min-width: 0;
+}
+
+.elmwood-fees-sched-col.is-oop{
+	background: var(--accent-color);
+}
+
+.elmwood-fees-sched-col small{
+	font-size: 10px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #7A9187;
+	line-height: 1.3;
+}
+
+.elmwood-fees-sched-col b{
+	font-family: var(--accent-font);
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--primary-color);
+	line-height: 1.25;
+}
+
+.elmwood-fees-sched-col span{
+	font-size: 11px;
+	line-height: 1.35;
+	color: #5B736A;
+}
+
+/* Vertical consultation fee rows */
+.elmwood-fees-rows{
+	display: grid;
+	gap: 10px;
+}
+
+.elmwood-fees-row{
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+	align-items: center;
+	gap: 16px;
+	padding: 16px 18px;
+	border-radius: 18px;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.07);
+	box-shadow: 0 8px 20px rgba(4, 59, 53, 0.04);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.elmwood-fees-row:hover{
+	transform: translateY(-2px);
+	border-color: rgba(4, 59, 53, 0.14);
+	box-shadow: 0 14px 30px rgba(4, 59, 53, 0.08);
+}
+
+.elmwood-fees-row-title strong{
+	font-family: var(--accent-font);
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--primary-color);
+	line-height: 1.35;
+}
+
+.elmwood-fees-row-meta{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 10px;
+}
+
+.elmwood-fees-row-meta span{
+	display: grid;
+	gap: 2px;
+	padding: 8px 10px;
+	border-radius: 12px;
+	background: #F7FAF8;
+	min-width: 0;
+}
+
+.elmwood-fees-row-meta small{
+	font-size: 11px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #7A9187;
+}
+
+.elmwood-fees-row-meta b{
+	font-family: var(--accent-font);
+	font-size: 15px;
+	font-weight: 700;
+	color: #2F4F45;
+	line-height: 1.2;
+}
+
+.elmwood-fees-row-meta .is-oop{
+	background: var(--accent-color);
+}
+
+.elmwood-fees-row-meta .is-oop b{
+	color: var(--primary-color);
+}
+
+.elmwood-fees-chips{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.elmwood-fees-chips.is-center{
+	justify-content: center;
+}
+
+.elmwood-fees-chips span{
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 13px;
+	border-radius: 999px;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.08);
+	font-size: 13px;
+	font-weight: 600;
+	color: #3E5A50;
+	box-shadow: 0 6px 16px rgba(4, 59, 53, 0.04);
+}
+
+.elmwood-fees-chips i{
+	color: var(--primary-color);
+	font-size: 13px;
+}
+
+/* Accordion */
+.elmwood-fees-accordion.faq-accordion .accordion-item{
+	margin-bottom: 10px;
+	border-radius: 16px;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.07);
+	box-shadow: 0 8px 20px rgba(4, 59, 53, 0.04);
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item:last-child{
+	margin-bottom: 0;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-header .accordion-button{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px 18px;
+	font-family: var(--accent-font);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--primary-color);
+	background: #fff;
+	box-shadow: none;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-header .accordion-button:not(.collapsed){
+	background: #fff;
+	color: var(--primary-color);
+	box-shadow: none;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-button::after,
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-button.collapsed::after{
+	width: 28px;
+	height: 28px;
+	background-size: 12px;
+	flex-shrink: 0;
+	margin-left: auto;
+}
+
+.elmwood-fees-acc-mark{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: var(--accent-color);
+	color: var(--primary-color);
+	font-size: 13px;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body{
+	display: block;
+	width: 100%;
+	padding: 0 16px 16px;
+	border-top: 0;
+	gap: 0;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body .accordion-body-content,
+.elmwood-fees-accordion .elmwood-fees-acc-body{
+	width: 100% !important;
+	max-width: 100%;
+	display: grid;
+	gap: 10px;
+	padding: 4px 2px 2px;
+}
+
+.elmwood-fees-acc-note{
+	padding: 14px 16px;
+	border-radius: 14px;
+	background: #F7FAF8;
+	border: 1px solid rgba(4, 59, 53, 0.06);
+}
+
+.elmwood-fees-acc-note--highlight{
+	background: var(--accent-color);
+	border-color: rgba(4, 59, 53, 0.1);
+}
+
+.elmwood-fees-acc-note h5{
+	font-family: var(--accent-font);
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin: 0 0 8px;
+	line-height: 1.35;
+}
+
+.elmwood-fees-acc-note p{
+	margin: 0 !important;
+	font-size: 14px;
+	line-height: 1.65;
+	color: #4F6A60;
+	text-align: left;
+}
+
+.elmwood-fees-acc-note p + p{
+	margin-top: 8px !important;
+}
+
+.elmwood-fees-acc-tag{
+	display: inline-flex;
+	align-items: center;
+	margin-top: 10px;
+	padding: 6px 10px;
+	border-radius: 999px;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.08);
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--primary-color);
+	line-height: 1.3;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body .elmwood-fees-acc-note ul,
+.elmwood-fees-accordion .elmwood-fees-acc-note ul{
+	list-style: none !important;
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	display: grid;
+	gap: 8px;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body .elmwood-fees-acc-note ul li,
+.elmwood-fees-accordion .elmwood-fees-acc-note ul li{
+	position: relative;
+	list-style: none !important;
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 0 0 0 22px !important;
+	font-size: 14px;
+	line-height: 1.55;
+	color: #4F6A60;
+	text-align: left;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body .elmwood-fees-acc-note ul li::marker,
+.elmwood-fees-accordion .elmwood-fees-acc-note ul li::marker{
+	content: none !important;
+	font-size: 0 !important;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-item .accordion-body .elmwood-fees-acc-note ul li::before,
+.elmwood-fees-accordion .elmwood-fees-acc-note ul li::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.45em;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--primary-color);
+	opacity: 0.7;
+}
+
+.elmwood-fees-accordion.faq-accordion .accordion-header .accordion-button:not(.collapsed){
+	background: var(--accent-color);
+	border-bottom: 1px solid rgba(4, 59, 53, 0.06);
+}
+
+/* Side rail */
+.elmwood-fees-side{
+	display: grid;
+	gap: 14px;
+	position: sticky;
+	top: 110px;
+	align-self: start;
+	z-index: 5;
+	max-height: calc(100vh - 130px);
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	scrollbar-width: thin;
+}
+
+.elmwood-fees-side-card{
+	padding: 22px 20px;
+	border-radius: 20px;
+	background: #fff;
+	border: 1px solid rgba(4, 59, 53, 0.08);
+	box-shadow: 0 12px 28px rgba(4, 59, 53, 0.06);
+}
+
+.elmwood-fees-side-card--gap{
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(160deg, var(--primary-color) 0%, #0A5C52 100%);
+	color: #fff;
+	border: 0;
+	box-shadow: 0 16px 34px rgba(4, 59, 53, 0.2);
+}
+
+.elmwood-fees-side-card--gap::after{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		115deg,
+		transparent 0%,
+		transparent 42%,
+		rgba(255, 255, 255, 0.18) 50%,
+		transparent 58%,
+		transparent 100%
+	);
+	background-size: 220% 100%;
+	animation: elmwoodFeesBandShine 3.6s ease-in-out infinite;
+	pointer-events: none;
+}
+
+.elmwood-fees-side-card--gap > *{
+	position: relative;
+	z-index: 1;
+}
+
+.elmwood-fees-side-kicker{
+	display: inline-block;
+	font-size: 11px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	opacity: 0.75;
+	margin-bottom: 8px;
+}
+
+.elmwood-fees-side-card h3{
+	font-family: var(--accent-font);
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin-bottom: 10px;
+	color: inherit;
+}
+
+.elmwood-fees-side-card:not(.elmwood-fees-side-card--gap) h3{
+	color: var(--primary-color);
+	font-size: 20px;
+}
+
+.elmwood-fees-side-card h3 small{
+	font-size: 14px;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+.elmwood-fees-side-card p,
+.elmwood-fees-side-card li{
+	font-size: 14px;
+	line-height: 1.55;
+	margin: 0;
+}
+
+.elmwood-fees-side-card--gap p,
+.elmwood-fees-side-card--gap li{
+	color: rgba(255, 255, 255, 0.86);
+}
+
+.elmwood-fees-side-card:not(.elmwood-fees-side-card--gap) p{
+	color: #5B736A;
+}
+
+.elmwood-fees-side-card ul{
+	margin: 12px 0 0;
+	padding-left: 18px;
+}
+
+.elmwood-fees-side-card li + li{
+	margin-top: 4px;
+}
+
+.elmwood-fees-side-actions{
+	display: grid;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.elmwood-fees-side-actions .btn-default{
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}
+
+@media (max-width: 1100px){
+	.elmwood-fees-layout{
+		grid-template-columns: 1fr;
+	}
+
+	.elmwood-fees-side{
+		position: static;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.elmwood-fees-conditions{
+		max-width: none;
+	}
+}
+
+@media (max-width: 767px){
+	.elmwood-fees-page{
+		padding: 56px 0 70px;
+	}
+
+	.elmwood-fees-incline-band{
+		padding: 14px 28px 14px 32px;
+		clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+		width: 100%;
+		max-width: 420px;
+	}
+
+	.elmwood-fees-incline-title{
+		font-size: 17px;
+	}
+
+	.elmwood-fees-incline-meta{
+		white-space: normal;
+		font-size: 11px;
+	}
+
+	.elmwood-fees-side{
+		grid-template-columns: 1fr;
+	}
+
+	.elmwood-fees-sched-cols{
+		grid-template-columns: 1fr;
+	}
+
+	.elmwood-fees-row{
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.elmwood-fees-row-meta{
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 8px;
+	}
+
+	.elmwood-fees-row-meta span{
+		padding: 8px;
+	}
+
+	.elmwood-fees-row-meta b{
+		font-size: 14px;
+	}
+
+	.elmwood-fees-accordion.faq-accordion .accordion-header .accordion-button{
+		padding: 14px 14px;
+		font-size: 14px;
+	}
+
+	.elmwood-fees-leaf{
+		opacity: 0.12;
+	}
+}
+
+@media (prefers-reduced-motion: reduce){
+	.elmwood-fees-leaf,
+	.elmwood-fees-shimmer,
+	.elmwood-fees-shimmer-light,
+	.elmwood-fees-incline-shine,
+	.elmwood-fees-side-card--gap::after{
+		animation: none !important;
+	}
+}
