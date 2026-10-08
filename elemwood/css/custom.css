@@ -669,17 +669,18 @@ header.main-header .header-sticky.active{
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 38px;
-	height: 38px;
+	width: 58px;
+	height: 44px;
 	flex-shrink: 0;
 	filter: drop-shadow(0 4px 8px rgba(0, 40, 90, 0.28));
 }
 
 .header-partner-flag img{
-	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	object-position: center;
+	transform: scale(1.15);
 }
 
 .header-partner-copy{
@@ -774,8 +775,8 @@ header.main-header .header-sticky.active{
 	}
 
 	.header-partner-flag{
-		width: 32px;
-		height: 32px;
+		width: 50px;
+		height: 38px;
 	}
 
 	.header-partner-title{
@@ -796,8 +797,8 @@ header.main-header .header-sticky.active{
 	}
 
 	.header-partner-flag{
-		width: 26px;
-		height: 26px;
+		width: 42px;
+		height: 32px;
 	}
 
 	.header-partner-kicker,
