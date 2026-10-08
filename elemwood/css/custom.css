@@ -10019,17 +10019,17 @@ header.main-header .navbar-brand .brand-sub-text,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/* Stronger green at top for menu visibility, then soft mid, deeper bottom */
+	/* Stronger green wash so wall "MEDICAL CENTRE" lettering in photo stays muted */
 	background:
-		linear-gradient(90deg, rgba(4, 59, 53, 0.4) 0%, rgba(4, 59, 53, 0.14) 50%, rgba(4, 59, 53, 0.32) 100%),
+		linear-gradient(90deg, rgba(4, 59, 53, 0.55) 0%, rgba(4, 59, 53, 0.28) 42%, rgba(4, 59, 53, 0.38) 100%),
 		linear-gradient(180deg,
-			rgba(4, 59, 53, 0.7) 0%,
-			rgba(4, 59, 53, 0.48) 10%,
-			rgba(4, 59, 53, 0.22) 22%,
-			rgba(4, 59, 53, 0.2) 40%,
-			rgba(4, 59, 53, 0.42) 58%,
-			rgba(4, 59, 53, 0.62) 78%,
-			rgba(4, 59, 53, 0.78) 100%
+			rgba(4, 59, 53, 0.72) 0%,
+			rgba(4, 59, 53, 0.52) 10%,
+			rgba(4, 59, 53, 0.34) 22%,
+			rgba(4, 59, 53, 0.32) 40%,
+			rgba(4, 59, 53, 0.48) 58%,
+			rgba(4, 59, 53, 0.66) 78%,
+			rgba(4, 59, 53, 0.8) 100%
 		);
 	z-index: 1;
 	pointer-events: none;
@@ -17692,26 +17692,35 @@ body{
 	overflow-x: clip;
 }
 
-/* Room for left chips — keep headline left, not pushed to center */
+/* Room for left chips — keep headline left, clear of longest ribbon */
 .hero-prime .container{
-	padding-left: clamp(10.5rem, 12vw, 13.5rem);
+	padding-left: clamp(15.5rem, 18vw, 20rem);
 	padding-right: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .hero-prime .hero-content-prime{
 	margin-left: 0;
 	text-align: left;
+	max-width: 100%;
 }
 
 .hero-prime .hero-content-prime .section-title{
 	text-align: left;
 }
 
+.hero-prime .hero-content-prime .section-sub-title,
+.hero-prime .hero-content-prime .section-title h1{
+	position: relative;
+	z-index: 2;
+}
+
 .hero-side-ribbons{
 	left: clamp(0.5rem, 1vw, 0.85rem);
 	gap: 0.4rem;
-	max-width: min(13rem, 18vw);
+	width: 13.5rem;
+	max-width: 13.5rem;
 	z-index: 5;
+	overflow: visible;
 }
 
 .side-ribbon{
@@ -18604,8 +18613,8 @@ body{
 /* Hero headline clear of left service ribbons (laptop + desktop) */
 @media only screen and (min-width: 768px){
 	.hero-prime .container{
-		/* Wider left inset so long chips (e.g. Commercial Licence) never cover H1 */
-		padding-left: clamp(12.5rem, 14vw, 16rem) !important;
+		/* Must clear longest chip: "Commercial Licence Medicals" */
+		padding-left: clamp(15.5rem, 18vw, 20rem) !important;
 	}
 
 	.hero-prime .col-xl-7{
@@ -18614,21 +18623,40 @@ body{
 
 	.hero-prime .hero-content-prime,
 	.hero-prime .hero-content-prime .section-title,
-	.hero-prime .hero-content-prime .section-title h1{
+	.hero-prime .hero-content-prime .section-title h1,
+	.hero-prime .hero-content-prime .section-sub-title{
 		text-align: left !important;
 		margin-left: 0 !important;
 		margin-right: auto;
 	}
+
+	/* Keep long chip labels inside the ribbon column (no spill onto headline) */
+	.hero-side-ribbons{
+		width: 13.75rem !important;
+		max-width: 13.75rem !important;
+	}
+
+	.side-ribbon{
+		max-width: 100%;
+		width: auto;
+	}
+
+	.side-ribbon-title{
+		white-space: normal !important;
+		max-width: 9.25rem;
+		line-height: 1.15;
+	}
 }
 
-/* MacBook / laptop band (~1280–1512): keep title clear of ribbons */
+/* MacBook / laptop band (~1280–1512): extra clearance for Apple laptop widths */
 @media only screen and (min-width: 1200px) and (max-width: 1600px){
 	.hero-prime .container{
-		padding-left: clamp(13.5rem, 15.5vw, 17rem) !important;
+		padding-left: clamp(16.5rem, 19vw, 21rem) !important;
 	}
 
 	.hero-side-ribbons{
-		max-width: 11.5rem;
+		width: 13.5rem !important;
+		max-width: 13.5rem !important;
 	}
 }
 
