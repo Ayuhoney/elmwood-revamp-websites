@@ -47,7 +47,7 @@
 			var $link = $item.children('.nav-link');
 
 			$link.on('click', function(e){
-				if(window.matchMedia('(max-width: 991px)').matches){ return; }
+				if(window.matchMedia('(max-width: 1199px)').matches){ return; }
 				// Allow navigation on second click when already open
 				if(!$item.hasClass('is-open')){
 					e.preventDefault();
@@ -60,7 +60,7 @@
 
 		/* Nested Services flyouts (General Practice / Other) */
 		$(document).on('click', '.elmwood-services-list > li.has-flyout > a', function(e){
-			if(window.matchMedia('(max-width: 991px)').matches){ return; }
+			if(window.matchMedia('(max-width: 1199px)').matches){ return; }
 			var $fly = $(this).closest('.has-flyout');
 			if(!$fly.hasClass('is-open')){
 				e.preventDefault();
@@ -172,6 +172,15 @@
 
 			function applySize() {
 				if (!img.naturalWidth || !img.naturalHeight) return;
+				/* On small screens let content dictate height (stacked chips + info box) */
+				if (window.innerWidth <= 767) {
+					$heroPrime.css({
+						height: 'auto',
+						minHeight: '0',
+						aspectRatio: 'auto'
+					});
+					return;
+				}
 				var ratio = img.naturalWidth / img.naturalHeight;
 				var width = $heroPrime.outerWidth();
 				if (!width || !ratio) return;
