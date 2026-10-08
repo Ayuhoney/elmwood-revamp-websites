@@ -17222,3 +17222,12 @@ body.elmwood-hotdoc-open{
 		animation: none !important;
 	}
 }
+
+/* ===== Side ribbon deep-link anchors ===== */
+#iron-infusion,
+#mirena-implanon,
+#commercial-licence,
+#skin-check,
+#skin-procedures{
+	scroll-margin-top: 120px;
+}
