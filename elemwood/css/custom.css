@@ -18790,3 +18790,728 @@ header.main-header .header-sticky .navbar-brand:not(.footer-brand) .brand-sub::a
 	background: #ffffff !important;
 	background-color: #ffffff !important;
 }
+
+/* ==========================================================================
+   Elmwood Facebook Community Section (White Luxury Edition with Leaf Animation)
+   ========================================================================== */
+.elmwood-facebook-section {
+	padding: 100px 0 110px;
+	background-color: #ffffff;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Floating Leaf & Botanical Animations */
+.fb-decor-leaf {
+	position: absolute;
+	pointer-events: none;
+	z-index: 1;
+	opacity: 0.85;
+}
+
+.fb-leaf-1 {
+	top: 40px;
+	right: 4%;
+	width: 65px;
+	height: 65px;
+	animation: floatLeaf1 7s ease-in-out infinite;
+}
+
+.fb-leaf-2 {
+	bottom: 60px;
+	left: 3%;
+	width: 80px;
+	height: 80px;
+	animation: floatLeaf2 9s ease-in-out infinite;
+}
+
+.fb-leaf-3 {
+	top: 25%;
+	left: 2%;
+	width: 45px;
+	height: 45px;
+	animation: floatLeaf3 6s ease-in-out infinite;
+	opacity: 0.6;
+}
+
+@keyframes floatLeaf1 {
+	0%, 100% {
+		transform: translateY(0px) rotate(0deg) scale(1);
+	}
+	50% {
+		transform: translateY(-22px) rotate(16deg) scale(1.06);
+	}
+}
+
+@keyframes floatLeaf2 {
+	0%, 100% {
+		transform: translateY(0px) rotate(0deg) scale(1);
+	}
+	50% {
+		transform: translateY(-28px) rotate(-18deg) scale(1.08);
+	}
+}
+
+@keyframes floatLeaf3 {
+	0%, 100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-16px) rotate(22deg);
+	}
+}
+
+/* Section Header (Light Mode) */
+.elmwood-facebook-section .section-title {
+	margin-bottom: 45px;
+	position: relative;
+	z-index: 2;
+}
+
+.elmwood-facebook-section .section-sub-title {
+	background: #E9FFF4;
+	color: #043B35;
+	border: 1px solid rgba(4, 59, 53, 0.15);
+	padding: 8px 22px;
+	border-radius: 30px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.elmwood-facebook-section .section-sub-title i.fa-leaf {
+	color: #10b981;
+	animation: floatLeaf3 4s ease-in-out infinite;
+}
+
+.elmwood-facebook-section .section-sub-title i.fa-facebook {
+	color: #1877F2;
+}
+
+.elmwood-facebook-section .section-title h2 {
+	color: #043B35;
+	font-size: 42px;
+	font-weight: 800;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	letter-spacing: -0.5px;
+}
+
+.elmwood-facebook-section .elmwood-fees-shimmer {
+	display: inline-block;
+	background-image: linear-gradient(
+		105deg,
+		#043B35 0%,
+		#043B35 25%,
+		#1A7A5E 40%,
+		#7EC9B5 50%,
+		#1A7A5E 60%,
+		#043B35 75%,
+		#043B35 100%
+	);
+	background-size: 200% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent !important;
+	color: transparent !important;
+	animation: elmwoodFbShimmerContinuous 3.8s linear infinite;
+}
+
+@keyframes elmwoodFbShimmerContinuous {
+	0% {
+		background-position: 200% center;
+	}
+	100% {
+		background-position: -200% center;
+	}
+}
+
+.elmwood-facebook-section .section-title p {
+	color: #656562;
+	font-size: 17px;
+	max-width: 680px;
+	margin: 0 auto;
+	line-height: 1.65;
+}
+
+/* Grid Layout */
+.fb-luxury-grid {
+	display: grid;
+	grid-template-columns: 500px 1fr;
+	gap: 32px;
+	position: relative;
+	z-index: 2;
+	align-items: stretch;
+}
+
+/* Left: Live Social Feed Card */
+.fb-live-card {
+	background: #ffffff;
+	border: 1px solid #e1ece7;
+	border-radius: 30px;
+	box-shadow: 0 15px 45px rgba(4, 59, 53, 0.07);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 500px;
+	max-width: 100%;
+	transition: all 0.35s ease;
+}
+
+.fb-live-card:hover {
+	border-color: #043B35;
+	box-shadow: 0 22px 55px rgba(4, 59, 53, 0.12);
+	transform: translateY(-5px);
+}
+
+.fb-card-topbar {
+	padding: 18px 20px;
+	background: linear-gradient(135deg, #043B35 0%, #0b5850 100%);
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.fb-brand-info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.fb-brand-avatar {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: #ffffff;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border: 2px solid #79f7c3;
+}
+
+.fb-brand-avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.fb-brand-text h4 {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.fb-brand-text h4 i {
+	color: #38bdf8;
+	background: transparent;
+	border-radius: 0;
+	font-size: 17px;
+	display: inline-block;
+}
+
+.fb-brand-text .fb-status-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	color: #b3d4cb;
+	margin-top: 2px;
+}
+
+.fb-status-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #10b981;
+	box-shadow: 0 0 10px #10b981;
+	animation: pulseStatus 2s infinite;
+}
+
+.fb-btn-follow {
+	background: #1877F2;
+	color: #ffffff !important;
+	padding: 8px 18px;
+	border-radius: 30px;
+	font-size: 13px;
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+.fb-btn-follow:hover {
+	background: #0d65d9;
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(24, 119, 242, 0.6);
+}
+
+.fb-feed-container {
+	padding: 0;
+	margin: 0;
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	max-width: 100%;
+	height: 500px;
+	min-height: 500px;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.fb-feed-container iframe {
+	border: none !important;
+	width: 500px !important;
+	max-width: 100% !important;
+	height: 500px !important;
+	display: block;
+	margin: 0 auto;
+}
+
+.fb-card-footbar {
+	padding: 14px 20px;
+	background: #F1F6F3;
+	border-top: 1px solid #e1ece7;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 13px;
+	color: #4a5c57;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.fb-card-footbar a {
+	color: #043B35;
+	text-decoration: none;
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	transition: all 0.2s ease;
+}
+
+.fb-card-footbar a:hover {
+	color: #1877F2;
+	transform: translateX(3px);
+}
+
+/* Right Column: Stack */
+.fb-side-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+/* Spotlight Card */
+.fb-spotlight-card {
+	background: #ffffff;
+	border: 1px solid #e1ece7;
+	border-radius: 30px;
+	padding: 24px;
+	box-shadow: 0 15px 45px rgba(4, 59, 53, 0.06);
+	position: relative;
+	transition: all 0.35s ease;
+}
+
+.fb-spotlight-card:hover {
+	border-color: #043B35;
+	box-shadow: 0 22px 55px rgba(4, 59, 53, 0.11);
+	transform: translateY(-5px);
+}
+
+.fb-spotlight-badge-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.fb-spotlight-pill {
+	background: #E9FFF4;
+	color: #043B35;
+	border: 1px solid rgba(4, 59, 53, 0.15);
+	padding: 5px 16px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.fb-post-time {
+	font-size: 13px;
+	color: #798e89;
+}
+
+.fb-spotlight-visual {
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 18px;
+	border: 1px solid #e1ece7;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.fb-spotlight-visual img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+	display: block;
+}
+
+.fb-spotlight-card:hover .fb-spotlight-visual img {
+	transform: scale(1.04);
+}
+
+.fb-visual-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(4, 59, 53, 0.85) 0%, transparent 100%);
+	padding: 14px 18px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.fb-overlay-tag {
+	font-size: 13px;
+	font-weight: 700;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.fb-spotlight-content h3 {
+	color: #043B35;
+	font-size: 20px;
+	font-weight: 800;
+	margin: 0 0 10px 0;
+	line-height: 1.4;
+}
+
+.fb-spotlight-content p {
+	color: #656562;
+	font-size: 15px;
+	line-height: 1.6;
+	margin: 0 0 16px 0;
+}
+
+/* Engagement Bar */
+.fb-engagement-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 14px;
+	border-top: 1px solid #eef4f1;
+}
+
+.fb-stat-chips {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.fb-stat-chip {
+	font-size: 13px;
+	color: #556965;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-weight: 600;
+}
+
+.fb-stat-chip i.fa-thumbs-up { color: #1877F2; }
+.fb-stat-chip i.fa-heart { color: #ef4444; }
+.fb-stat-chip i.fa-share { color: #10b981; }
+
+.fb-spotlight-link {
+	color: #043B35;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	transition: all 0.25s ease;
+}
+
+.fb-spotlight-link:hover {
+	color: #1877F2;
+	transform: translateX(4px);
+}
+
+/* Perks Grid */
+.fb-perks-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.fb-perk-card {
+	background: #ffffff;
+	border: 1px solid #e1ece7;
+	border-radius: 20px;
+	padding: 18px 20px;
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	box-shadow: 0 8px 25px rgba(4, 59, 53, 0.04);
+	transition: all 0.3s ease;
+}
+
+.fb-perk-card:hover {
+	border-color: #043B35;
+	box-shadow: 0 12px 35px rgba(4, 59, 53, 0.08);
+	transform: translateY(-3px);
+}
+
+.fb-perk-icon {
+	width: 42px;
+	height: 42px;
+	min-width: 42px;
+	border-radius: 12px;
+	background: #E9FFF4;
+	color: #043B35;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+}
+
+.fb-perk-text h4 {
+	color: #043B35;
+	font-size: 15px;
+	font-weight: 700;
+	margin: 0 0 4px 0;
+}
+
+.fb-perk-text p {
+	color: #656562;
+	font-size: 13px;
+	line-height: 1.45;
+	margin: 0;
+}
+
+/* Master CTA Bar */
+.fb-master-cta {
+	background: linear-gradient(135deg, #043B35 0%, #0a534b 100%);
+	border-radius: 24px;
+	padding: 22px 28px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	box-shadow: 0 15px 35px rgba(4, 59, 53, 0.18);
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.fb-master-cta::after {
+	content: "";
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	width: 120px;
+	height: 120px;
+	background: radial-gradient(circle, rgba(121, 247, 195, 0.2) 0%, transparent 70%);
+	pointer-events: none;
+}
+
+.fb-master-cta:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 20px 45px rgba(4, 59, 53, 0.25);
+}
+
+.fb-cta-left {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.fb-cta-icon-round {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: #ffffff;
+	color: #1877F2;
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fb-cta-info h4 {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 800;
+	margin: 0 0 3px 0;
+}
+
+.fb-cta-info p {
+	color: #d1e7dd;
+	font-size: 14px;
+	margin: 0;
+}
+
+.fb-cta-action-btn {
+	background: #ffffff;
+	color: #043B35 !important;
+	padding: 12px 26px;
+	border-radius: 30px;
+	font-weight: 800;
+	font-size: 14px;
+	text-decoration: none;
+	white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	transition: all 0.25s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.fb-cta-action-btn:hover {
+	background: #E9FFF4;
+	transform: scale(1.06);
+	color: #043B35 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+	.fb-luxury-grid {
+		grid-template-columns: 1fr;
+		max-width: 650px;
+		margin: 40px auto 0;
+	}
+	.fb-live-card {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.elmwood-facebook-section {
+		padding: 60px 0 70px;
+	}
+	.elmwood-facebook-section .section-title h2 {
+		font-size: 28px;
+		line-height: 1.3;
+	}
+	.elmwood-facebook-section .section-title p {
+		font-size: 15px;
+	}
+	.fb-perks-grid {
+		grid-template-columns: 1fr;
+	}
+	.fb-master-cta {
+		flex-direction: column;
+		text-align: center;
+		padding: 20px;
+	}
+	.fb-cta-left {
+		flex-direction: column;
+	}
+	.fb-decor-leaf {
+		display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.fb-live-card {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 20px;
+	}
+	.fb-card-topbar {
+		padding: 14px 14px;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	.fb-brand-avatar {
+		width: 38px;
+		height: 38px;
+		min-width: 38px;
+	}
+	.fb-brand-text h4 {
+		font-size: 14px;
+	}
+	.fb-brand-text .fb-status-pill {
+		font-size: 11px;
+	}
+	.fb-btn-follow {
+		padding: 6px 14px;
+		font-size: 12px;
+	}
+	.fb-feed-container {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 460px;
+	}
+	.fb-feed-container iframe {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 460px !important;
+	}
+	.fb-card-footbar {
+		padding: 12px 14px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		font-size: 12px;
+	}
+	.fb-spotlight-card {
+		padding: 16px;
+		border-radius: 20px;
+	}
+	.fb-spotlight-visual img {
+		height: 160px;
+	}
+	.fb-spotlight-content h3 {
+		font-size: 17px;
+	}
+	.fb-spotlight-content p {
+		font-size: 14px;
+	}
+	.fb-engagement-bar {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.fb-spotlight-link {
+		width: 100%;
+	}
+	.fb-cta-action-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+
+
